@@ -65,3 +65,4 @@ obj-$(CONFIG_CED1401)		+= ced1401/
 obj-$(CONFIG_DRM_IMX)		+= imx-drm/
 obj-$(CONFIG_DGRP)		+= dgrp/
 obj-$(CONFIG_FSL_DPA)		+= fsl_qbman/
+obj-$(CONFIG_FSL_PME2)		+= fsl_pme2/
