@@ -63,3 +63,4 @@ obj-$(CONFIG_ZCACHE)		+= zcache/
 obj-$(CONFIG_GOLDFISH)		+= goldfish/
 obj-$(CONFIG_USB_DWC2)		+= dwc2/
 obj-$(CONFIG_FSL_DPA)		+= fsl_qbman/
+obj-$(CONFIG_FSL_PME2)		+= fsl_pme2/
