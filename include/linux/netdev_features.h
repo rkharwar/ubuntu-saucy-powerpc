@@ -56,6 +56,7 @@ enum {
 	NETIF_F_LOOPBACK_BIT,		/* Enable loopback */
 	NETIF_F_RXFCS_BIT,		/* Append FCS to skb pkt data */
 	NETIF_F_RXALL_BIT,		/* Receive errored frames too */
+	NETIF_F_HW_QDISC_BIT,		/* Supports hardware Qdisc */
 
 	/*
 	 * Add your fresh new feature above and remember to update
@@ -80,6 +81,7 @@ enum {
 #define NETIF_F_GSO_ROBUST	__NETIF_F(GSO_ROBUST)
 #define NETIF_F_HIGHDMA		__NETIF_F(HIGHDMA)
 #define NETIF_F_HW_CSUM		__NETIF_F(HW_CSUM)
+#define NETIF_F_HW_QDISC	__NETIF_F(HW_QDISC)
 #define NETIF_F_HW_VLAN_FILTER	__NETIF_F(HW_VLAN_FILTER)
 #define NETIF_F_HW_VLAN_RX	__NETIF_F(HW_VLAN_RX)
 #define NETIF_F_HW_VLAN_TX	__NETIF_F(HW_VLAN_TX)
