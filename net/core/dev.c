@@ -2670,6 +2670,12 @@ int dev_queue_xmit(struct sk_buff *skb)
 
 	skb_update_prio(skb);
 
+	if (dev->features & NETIF_F_HW_QDISC) {
+ 		txq = netdev_pick_tx(dev, skb);
+		rc = dev_hard_start_xmit(skb, dev, txq);
+		goto out;
+	}
+
 	txq = netdev_pick_tx(dev, skb);
 	q = rcu_dereference_bh(txq->qdisc);
 
