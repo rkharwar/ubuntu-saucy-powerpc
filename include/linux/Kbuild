@@ -1,4 +1,5 @@
 header-y += dvb/
+header-y += fmd/
 header-y += hdlc/
 header-y += hsi/
 header-y += raid/
