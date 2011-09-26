@@ -14,7 +14,6 @@
 #include <linux/init.h>
 #include <linux/slab.h>
 #include <linux/smp.h>
-#include <linux/completion.h>
 #include <linux/percpu.h>
 #include <linux/bitops.h>
 #include <linux/notifier.h>
@@ -49,7 +48,6 @@ struct flow_cache_percpu {
 struct flow_flush_info {
 	struct flow_cache		*cache;
 	atomic_t			cpuleft;
-	struct completion		completion;
 };
 
 struct flow_cache {
@@ -100,7 +98,7 @@ static void flow_entry_kill(struct flow_cache_entry *fle)
 	kmem_cache_free(flow_cachep, fle);
 }
 
-static void flow_cache_gc_task(struct work_struct *work)
+static void flow_cache_gc_task(void)
 {
 	struct list_head gc_list;
 	struct flow_cache_entry *fce, *n;
@@ -113,7 +111,6 @@ static void flow_cache_gc_task(struct work_struct *work)
 	list_for_each_entry_safe(fce, n, &gc_list, u.gc_list)
 		flow_entry_kill(fce);
 }
-static DECLARE_WORK(flow_cache_gc_work, flow_cache_gc_task);
 
 static void flow_cache_queue_garbage(struct flow_cache_percpu *fcp,
 				     int deleted, struct list_head *gc_list)
@@ -123,7 +120,7 @@ static void flow_cache_queue_garbage(struct flow_cache_percpu *fcp,
 		spin_lock_bh(&flow_cache_gc_lock);
 		list_splice_tail(gc_list, &flow_cache_gc_list);
 		spin_unlock_bh(&flow_cache_gc_lock);
-		schedule_work(&flow_cache_gc_work);
+		flow_cache_gc_task();
 	}
 }
 
@@ -320,8 +317,7 @@ static void flow_cache_flush_tasklet(unsigned long data)
 
 	flow_cache_queue_garbage(fcp, deleted, &gc_list);
 
-	if (atomic_dec_and_test(&info->cpuleft))
-		complete(&info->completion);
+	atomic_dec(&info->cpuleft);
 }
 
 static void flow_cache_flush_per_cpu(void *data)
@@ -337,22 +333,23 @@ static void flow_cache_flush_per_cpu(void *data)
 void flow_cache_flush(void)
 {
 	struct flow_flush_info info;
-	static DEFINE_MUTEX(flow_flush_sem);
+	static DEFINE_SPINLOCK(flow_flush_lock);
 
 	/* Don't want cpus going down or up during this. */
 	get_online_cpus();
-	mutex_lock(&flow_flush_sem);
+	spin_lock_bh(&flow_flush_lock);
 	info.cache = &flow_cache_global;
 	atomic_set(&info.cpuleft, num_online_cpus());
-	init_completion(&info.completion);
 
 	local_bh_disable();
 	smp_call_function(flow_cache_flush_per_cpu, &info, 0);
 	flow_cache_flush_tasklet((unsigned long)&info);
 	local_bh_enable();
 
-	wait_for_completion(&info.completion);
-	mutex_unlock(&flow_flush_sem);
+	while (atomic_read(&info.cpuleft) != 0)
+		cpu_relax();
+
+	spin_unlock_bh(&flow_flush_lock);
 	put_online_cpus();
 }
 
