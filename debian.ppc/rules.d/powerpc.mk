@@ -19,5 +19,6 @@ do_doc_package          = false
 do_source_package       = false
 do_common_headers_indep = true
 do_libc_dev_package     = true
+do_tools		= false
 
 family			= ubuntu
