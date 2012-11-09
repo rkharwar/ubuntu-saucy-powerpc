@@ -18,6 +18,9 @@ loader		= yaboot
 
 custom_flavours	=
 
+skipabi = true
+skipmodules = true
+
 no_dumpfile		= true
 do_doc_package          = false
 do_source_package       = false
