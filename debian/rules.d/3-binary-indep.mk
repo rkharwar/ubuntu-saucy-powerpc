@@ -27,7 +27,7 @@ endif
 	find $(docdir) -name .gitignore | xargs rm -f
 endif
 
-indep_hdrpkg = $(hdrs_pkg_name)
+indep_hdrpkg = $(indep_hdrs_pkg_name)
 indep_hdrdir = $(CURDIR)/debian/$(indep_hdrpkg)/usr/src/$(indep_hdrpkg)
 install-headers:
 	@echo Debug: $@
