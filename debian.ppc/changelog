@@ -98,7 +98,7 @@ linux-ppc (3.7.0-0.2) raring; urgency=low
 
   * fixup: Correct errors in gpio-poweroff callback
 
- --  Tim Gardner <tim.gardner@canonical.com>  Wed, 07 Nov 2012 08:07:32 -0700
+ --  Ben Collins <ben.c@servergy.com>  Wed, 07 Nov 2012 08:07:32 -0700
 
 linux-ppc (3.7.0-0.1) raring; urgency=low
 
