@@ -1,4 +1,7 @@
 efi-modules
 fb-modules
 acpi-modules
-virtio-modules
+serial-modules
+nic-pcmcia-modules
+pcmcia-modules
+pcmcia-storage-modules
