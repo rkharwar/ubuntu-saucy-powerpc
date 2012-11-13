@@ -24,7 +24,7 @@ skipmodules = true
 no_dumpfile		= true
 do_doc_package          = false
 do_source_package       = true
-do_common_headers_indep = true
+do_common_headers_indep = false
 do_libc_dev_package     = false
 do_tools		= false
 
