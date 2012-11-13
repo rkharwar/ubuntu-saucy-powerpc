@@ -57,7 +57,7 @@ Description: Linux kernel version specific tools for version PKGVER
  version PGKVER.
 
 Package: SRCPKGNAME-headers-PKGVER-ABINUM
-Architecture: all
+Architecture: powerpc
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0)
