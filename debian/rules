@@ -58,7 +58,7 @@ clean: debian/control
 	dh_clean
 
 	# d-i stuff
-	rm -rf $(DEBIAN)/d-i-$(arch)
+	rm -rf debian/d-i-$(arch)
 
 	# normal build junk
 	rm -rf $(DEBIAN)/abi/$(release)-$(revision)
