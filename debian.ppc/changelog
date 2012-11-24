@@ -1,4 +1,9 @@
-linux-ppc (3.7.0-1.9) raring; urgency=low
+linux-ppc (3.7.0-1.10) raring; urgency=low
+
+  [ Ben Collins ]
+
+  * [Config] Disable Xilinx ethernet drivers (not needed)
+  * Re-upload of 1.9 to fix build failure
 
   [ Ubuntu: 3.7.0-3.9 ]
 
