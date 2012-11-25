@@ -1,4 +1,9 @@
-linux-ppc (3.7.0-1.10) raring; urgency=low
+linux-ppc (3.7.0-1.11) raring; urgency=low
+
+  [ Ben Collins ]
+
+  * [Config] Fixup nic-firmware udeb to not require bnx2 firmware
+  * Re-upload of 1.10 to fix build failure
 
   [ Ben Collins ]
 
