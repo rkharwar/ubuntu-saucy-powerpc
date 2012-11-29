@@ -1,12 +1,12 @@
 repo_list=(
-	"http://archive.ubuntu.com/ubuntu/pool/main/l/linux"
-	"http://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux"
-	"http://archive.ubuntu.com/ubuntu/pool/universe/l/linux"
-	"http://ports.ubuntu.com/ubuntu-ports/pool/universe/l/linux"
-	"http://ppa.launchpad.net/canonical-kernel-team/ppa/ubuntu/pool/main/l/linux"
+	"http://archive.ubuntu.com/ubuntu/pool/main/l/linux-ppc"
+	"http://ports.ubuntu.com/ubuntu-ports/pool/main/l/linux-ppc"
+	"http://archive.ubuntu.com/ubuntu/pool/universe/l/linux-ppc"
+	"http://ports.ubuntu.com/ubuntu-ports/pool/universe/l/linux-ppc"
+	"http://ppa.launchpad.net/canonical-kernel-team/ppa/ubuntu/pool/main/l/linux-ppc"
 )
 
-package_prefixes linux-image-ppc
+package_prefixes linux-image
 
 # Ports arches and flavours.
-getall powerpc-smp powerpc64-smp powerpc-e500 powerpc-e500mc
+getall powerpc powerpc-smp powerpc64-smp powerpc-e500 powerpc-e500mc
