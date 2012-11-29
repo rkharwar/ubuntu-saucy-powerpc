@@ -280,6 +280,7 @@ au0828
 au8522_common
 au8522_decoder
 au8522_dig
+aufs
 auo-pixcir-ts
 auo_k1900fb
 auo_k1901fb
@@ -1456,7 +1457,6 @@ lis3lv02d_i2c
 lis3lv02d_spi
 litelink-sir
 lkkbd
-ll_temac
 llc
 llc2
 lm3533-als
@@ -1885,6 +1885,7 @@ ov7670
 ov772x
 ov9640
 ov9740
+overlayfs
 oxu210hp-hcd
 ozwpan
 p54common
@@ -2984,12 +2985,10 @@ twidjoy
 twl4030-madc
 twl4030-madc-hwmon
 twl4030-pwrbutton
-twl4030-usb
 twl4030-vibra
 twl4030_charger
 twl4030_keypad
 twl4030_wdt
-twl6030-usb
 twl6040-vibra
 twofish_common
 twofish_generic
@@ -3239,8 +3238,6 @@ xfrm_ipcomp
 xfrm_user
 xfs
 xgifb
-xilinx_emac
-xilinx_emaclite
 xilinx_ps2
 xilinx_uartps
 xirc2ps_cs
