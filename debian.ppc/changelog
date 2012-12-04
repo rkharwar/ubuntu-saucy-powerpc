@@ -1,3 +1,48 @@
+linux-ppc (3.7.0-3.13) raring; urgency=low
+
+  [ Ubuntu: 3.7.0-5.13 ]
+
+  * SAUCE: inotify, fanotify: replace fsnotify_put_group() with
+    fsnotify_destroy_group()
+    - LP: #922906
+  * SAUCE: fsnotify: introduce fsnotify_get_group()
+    - LP: #922906
+  * SAUCE: fsnotify: use reference counting for groups
+    - LP: #922906
+  * SAUCE: fsnotify: take groups mark_lock before mark lock
+    - LP: #922906
+  * SAUCE: fanotify: add an extra flag to mark_remove_from_mask that
+    indicates wheather a mark should be destroyed
+    - LP: #922906
+  * SAUCE: fsnotify: use a mutex instead of a spinlock to protect a groups
+    mark list
+    - LP: #922906
+  * SAUCE: fsnotify: pass group to fsnotify_destroy_mark()
+    - LP: #922906
+  * SAUCE: fsnotify: introduce locked versions of fsnotify_add_mark() and
+    fsnotify_remove_mark()
+    - LP: #922906
+  * SAUCE: fsnotify: dont put marks on temporary list when clearing marks
+    by group
+    - LP: #922906
+  * SAUCE: fsnotify: change locking order
+    - LP: #922906
+  * [Config] CONFIG_NFC_LLCP=y
+  * [Config] get-firmware: Filter new files through fwinfo
+  * [Config] CONFIG_MTD_NAND_DOCG4=m for all arches
+  * [Config] CONFIG_DRM_EXYNOS_HDMI=y
+  * [Config] CONFIG_XEN=y for all arches
+  * [Config] CONFIG_SND_OMAP_SOC_ZOOM2=m
+  * [Config] CONFIG_MMC_DW_EXYNOS=m
+  * [Config] CONFIG_GPIO_ADNP=m
+  * [Config] find-obsolete-firmware: Use correct path
+  * rebase to v3.7-rc8
+    - LP: #1084640
+  * Revert "VFS: don't do protected {sym,hard}links by default"
+    - LP: #1084192
+
+ -- Ben Collins <ben.c@servergy.com>  Tue, 04 Dec 2012 15:53:21 -0500
+
 linux-ppc (3.7.0-2.12) raring; urgency=low
 
   [ Ubuntu: 3.7.0-4.12 ]
