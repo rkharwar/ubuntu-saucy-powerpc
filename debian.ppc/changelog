@@ -1,3 +1,33 @@
+linux-ppc (3.7.0-4.14) raring; urgency=low
+
+  [ Andy Whitcroft ]
+
+  * [Configs] apply annotation updates to PPC configs (top section)
+
+  [ Ubuntu: 3.7.0-6.14 ]
+
+  * [Config] annotations: all new annotations scheme including defaults
+  * [Configs] apply annotation updates to main configs (top section)
+  * Revert "SAUCE: include <linux/printk.h> and <stdarg.h> for mmc_core arm
+    build"
+  * Revert "SAUCE: [arm] fixup __aeabi_uldivmod undefined build error"
+  * Temporarily disable module check for build
+  * ubuntu: dm-raid45: Adapt to upstream interface changes
+  * Re-enable build of dm-raid45
+  * SAUCE: Moved scripts/fw-to-ihex.sh to debian/scripts/misc
+  * SAUCE: ACPICA: Fix ACPI mutex object allocation memory leak on error
+  * SAUCE: drm: Fix possible EDID memory allocation oops
+  * SAUCE: ttm: Fix possible _manager memory allocation oops
+  * SAUCE: iwlwifi: iwlagn_request_scan: Fix check for priv->scan_request
+  * SAUCE: i915: intel_set_mode: Reduce stack allocation from 500 bytes to
+    2 pointers
+  * SAUCE: tools: hv: Netlink source address validation allows DoS
+    - LP: #1084777
+    - CVE-2012-5532
+  * rebase to v3.7
+
+ -- Ben Collins <ben.c@servergy.com>  Tue, 11 Dec 2012 08:15:02 -0500
+
 linux-ppc (3.7.0-3.13) raring; urgency=low
 
   [ Ubuntu: 3.7.0-5.13 ]
