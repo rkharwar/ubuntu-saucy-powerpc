@@ -1,3 +1,5 @@
+3c574_cs
+3c589_cs
 3c59x
 3w-9xxx
 3w-sas
@@ -7,6 +9,7 @@
 8021q
 8139cp
 8139too
+8250_core
 8250_dw
 8250_pci
 8390
@@ -172,6 +175,7 @@ af_packet_diag
 affs
 ah4
 ah6
+aha152x_cs
 ahci_platform
 aic79xx
 aic7xxx
@@ -179,6 +183,7 @@ aic94xx
 aiptek
 aircable
 airo
+airo_cs
 ak8975
 alauda
 algif_hash
@@ -225,6 +230,7 @@ arptable_filter
 as5011
 asc7621
 asix
+ast
 asus_oled
 async_memcpy
 async_pq
@@ -234,7 +240,7 @@ async_xor
 at24
 at25
 at76c50x-usb
-at803x
+at86rf230
 ata_generic
 ata_piix
 atbm8830
@@ -258,7 +264,7 @@ atl2
 atm
 atmel
 atmel-pwm-bl
-atmel-rng
+atmel_cs
 atmel_mxt_ts
 atmel_pci
 atmel_pwm
@@ -279,11 +285,15 @@ auth_rpcgss
 authenc
 authencesn
 autofs4
+avm_cs
+avma1_cs
 avmfritz
 ax25
+axnet_cs
 b1
 b1dma
 b1pci
+b1pcmcia
 b2c2-flexcop
 b2c2-flexcop-pci
 b2c2-flexcop-usb
@@ -300,7 +310,6 @@ bch
 bcm203x
 bcm3510
 bcm5974
-bcm87xx
 bcm_wimax
 bcma
 bcma-hcd
@@ -315,8 +324,10 @@ bh1770glc
 bh1780gli
 binfmt_misc
 block2mtd
+blocklayoutdriver
 blowfish_common
 blowfish_generic
+bluecard_cs
 bluetooth
 bma150
 bmp085-i2c
@@ -342,6 +353,7 @@ brcmutil
 bridge
 broadsheetfb
 bsd_comp
+bt3c_cs
 bt819
 bt856
 bt866
@@ -352,6 +364,7 @@ btmrvl_sdio
 btrfs
 btsdio
 bttv
+btuart_cs
 btusb
 btwilink
 bu21013_ts
@@ -428,6 +441,7 @@ ci13xxx_msm
 ci13xxx_pci
 ci_hdrc
 cifs
+cirrus
 cirrusfb
 clearpad_tm1217
 clip
@@ -441,6 +455,8 @@ cls_rsvp6
 cls_tcindex
 cls_u32
 cm109
+cm4000_cs
+cm4040_cs
 cma3000_d0x
 cma3000_d0x_i2c
 cmtp
@@ -449,6 +465,7 @@ cobra
 coda
 com20020
 com20020-pci
+com20020_cs
 com90io
 com90xx
 comm
@@ -574,7 +591,10 @@ dlm
 dm-bio-prison
 dm-bufio
 dm-crypt
+dm-delay
+dm-flakey
 dm-log
+dm-log-userspace
 dm-mirror
 dm-multipath
 dm-persistent-data
@@ -585,6 +605,7 @@ dm-round-robin
 dm-service-time
 dm-snapshot
 dm-thin-pool
+dm-verity
 dm-zero
 dm1105
 dm9601
@@ -626,6 +647,7 @@ dst
 dst_ca
 dstr
 dt3155v4l
+dtl1_cs
 dummy
 dvb-as102
 dvb-bt8xx
@@ -718,6 +740,7 @@ efs
 egalax_ts
 ehv_bytechan
 elo
+elsa_cs
 em28xx
 em28xx-alsa
 em28xx-dvb
@@ -736,6 +759,7 @@ emi26
 emi62
 empeg
 ems_pci
+ems_pcmcia
 ems_usb
 emu10k1-gp
 enc28j60
@@ -764,6 +788,7 @@ exynos-rng
 ezusb
 f75375s
 f81232
+fakelb
 fan53555
 farsync
 fat
@@ -776,6 +801,7 @@ fc2580
 fcoe
 fcrypt
 fdomain
+fdomain_cs
 fealnx
 ff-memless
 firedtv
@@ -791,6 +817,7 @@ flexcan
 floppy
 fm801-gp
 fm_drv
+fmvj18x_cs
 forcedeth
 fore_200e
 freevxfs
@@ -809,6 +836,7 @@ fsl_upm
 fsl_usb2_udc
 fsldma
 ft1000
+ft1000_pcmcia
 ftdi-elan
 ftdi_sio
 ftl
@@ -1053,6 +1081,7 @@ hmc6352
 hopper
 horizon
 hostap
+hostap_cs
 hostap_pci
 hostap_plx
 hp100
@@ -1122,6 +1151,7 @@ i2o_scsi
 i5k_amb
 i6300esb
 i740fb
+i82092
 ib_addr
 ib_cm
 ib_core
@@ -1251,6 +1281,7 @@ iptable_security
 ipw
 ipw2100
 ipw2200
+ipwireless
 ipx
 ir-jvc-decoder
 ir-kbd-i2c
@@ -1313,6 +1344,7 @@ ixgb
 ixgbe
 ixgbevf
 ixj
+ixj_pcmcia
 janz-cmodio
 janz-ican3
 jc42
@@ -1416,6 +1448,7 @@ libcomposite
 libcrc32c
 libcxgbi
 libertas
+libertas_cs
 libertas_sdio
 libertas_spi
 libertas_tf
@@ -1519,6 +1552,7 @@ mac-romanian
 mac-turkish
 mac80211
 mac80211_hwsim
+mac802154
 mac_hid
 macvlan
 macvtap
@@ -1598,11 +1632,6 @@ mct_u232
 md4
 mdc800
 mdio
-mdio-bitbang
-mdio-gpio
-mdio-mux
-mdio-mux-gpio
-mdio-mux-mmioreg
 megaraid
 megaraid_mbox
 megaraid_mm
@@ -1643,6 +1672,7 @@ mptsas
 mptscsih
 mptspi
 mpu3050
+mrf24j40
 mrst_max3110
 msdos
 msp3400
@@ -1763,6 +1793,7 @@ nfnetlink_log
 nfnetlink_queue
 nfs
 nfs_acl
+nfs_layout_nfsv41_files
 nfsd
 nfsv2
 nfsv3
@@ -1812,6 +1843,7 @@ nls_koi8-r
 nls_koi8-ru
 nls_koi8-u
 nls_utf8
+nmclan_cs
 nop-usb-xceiv
 nosy
 notifier-error-inject
@@ -1821,12 +1853,14 @@ ns558
 ns83820
 nsc-ircc
 nsp32
+nsp_cs
 ntc_thermistor
 ntfs
 nvidiafb
 nvme
 nxt200x
 nxt6000
+objlayoutdriver
 ocfs2
 ocfs2_dlm
 ocfs2_dlmfs
@@ -1856,6 +1890,7 @@ option
 or51132
 or51211
 orinoco
+orinoco_cs
 orinoco_nortel
 orinoco_plx
 orinoco_tmd
@@ -1888,6 +1923,7 @@ paride
 parkbd
 parport
 parport_ax88796
+parport_cs
 parport_pc
 parport_serial
 pata_ali
@@ -1921,6 +1957,7 @@ pata_of_platform
 pata_oldpiix
 pata_opti
 pata_optidma
+pata_pcmcia
 pata_pdc2027x
 pata_pdc202xx_old
 pata_piccolo
@@ -1959,14 +1996,21 @@ pci
 pci-stub
 pci200syn
 pcips2
+pcmcia
+pcmcia_core
+pcmcia_rsrc
+pcmciamtd
 pcnet32
+pcnet_cs
 pcrypt
 pcwd_pci
 pcwd_usb
 pd
+pd6729
 pda_power
 pdc_adma
 peak_pci
+peak_pcmcia
 peak_usb
 pegasus
 penmount
@@ -2036,11 +2080,14 @@ qla3xxx
 qla4xxx
 qlcnic
 qlge
+qlogic_cs
+qlogicfas408
 qmi_wwan
 qnx4
 qnx6
 qt1010
 qt1070
+qt2160
 quatech2
 quota_tree
 quota_v1
@@ -2076,6 +2123,7 @@ raid6test
 raid_class
 ramoops
 raw
+ray_cs
 rbd
 rbtree_test
 rc-adstech-dvb-t-pci
@@ -2395,11 +2443,14 @@ sdhci-of-hlwd
 sdhci-pci
 sdhci-pltfm
 sdio_uart
+sdricoh_cs
+sedlbauer_cs
 seed
 seeq8005
 sep_driver
 seqiv
 ser_gigaset
+serial_cs
 serio_raw
 sermouse
 serpent_generic
@@ -2407,7 +2458,6 @@ serport
 serqt_usb2
 ses
 sfc
-sha512_generic
 shark2
 shpchp
 sht15
@@ -2435,6 +2485,7 @@ skfp
 skge
 sky2
 sl811-hcd
+sl811_cs
 slcan
 slip
 slram
@@ -2444,6 +2495,7 @@ sm7xxfb
 sm_common
 sm_ftl
 smb347-charger
+smc91c92_cs
 smm665
 smsc-ircc2
 smsc47m192
@@ -2460,6 +2512,7 @@ snd-ac97-codec
 snd-ad1889
 snd-ak4113
 snd-ak4114
+snd-ak4117
 snd-ak4xxx-adda
 snd-ali5451
 snd-aloop
@@ -2550,6 +2603,7 @@ snd-oxygen-lib
 snd-page-alloc
 snd-pcm
 snd-pcxhr
+snd-pdaudiocf
 snd-portman2x4
 snd-pt2258
 snd-rawmidi
@@ -2694,12 +2748,14 @@ snd-virmidi
 snd-virtuoso
 snd-vx-lib
 snd-vx222
+snd-vxpocket
 snd-ymfpci
 soc_camera
 soc_camera_platform
 soc_mediabus
 softdog
 softing
+softing_cs
 solo6x10
 solos-pci
 soundcore
@@ -2725,6 +2781,7 @@ speakup_ltlk
 speakup_soft
 speakup_spkout
 speakup_txprt
+spectrum_cs
 speedfax
 speedtch
 spi-altera
@@ -2785,12 +2842,14 @@ sunrpc
 svcrdma
 svgalib
 sx8
+sym53c500_cs
 sym53c8xx
 symbolserial
 synaptics_i2c
 synaptics_i2c_rmi4
 synaptics_usb
 synclink
+synclink_cs
 synclink_gt
 synclinkmp
 syscopyarea
@@ -2854,6 +2913,7 @@ tea6420
 tef6862
 tehuti
 tekram-sir
+teles_cs
 test-kstrtox
 test_power
 tg3
@@ -3146,6 +3206,9 @@ wl1251_spi
 wl1273-core
 wl12xx
 wl18xx
+wl3501_cs
+wlags49_h25_cs
+wlags49_h2_cs
 wlcore
 wlcore_sdio
 wlcore_spi
@@ -3195,6 +3258,8 @@ xgifb
 xgmac_mdio
 xilinx_ps2
 xilinx_uartps
+xirc2ps_cs
+xircom_cb
 xor
 xpad
 xprtrdma
@@ -3271,6 +3336,7 @@ xz_dec_test
 yam
 yealink
 yellowfin
+yenta_socket
 yurex
 zatm
 zaurus
