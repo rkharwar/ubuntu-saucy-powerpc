@@ -2681,13 +2681,6 @@ EXPORT_SYMBOL drivers/target/target_core_mod 0xf6de1a0c	target_execute_cmd
 EXPORT_SYMBOL drivers/target/target_core_mod 0xf9323541	transport_generic_free_cmd
 EXPORT_SYMBOL drivers/target/target_core_mod 0xf9c66bf9	sas_get_pr_transport_id_len
 EXPORT_SYMBOL drivers/target/target_core_mod 0xfceac81f	transport_generic_map_mem_to_cmd
-EXPORT_SYMBOL drivers/tty/serial/8250/8250_core 0x849c399b	serial8250_register_8250_port
-EXPORT_SYMBOL drivers/tty/serial/8250/8250_core 0xa25776da	serial8250_do_pm
-EXPORT_SYMBOL drivers/tty/serial/8250/8250_core 0xa7864766	serial8250_do_set_termios
-EXPORT_SYMBOL drivers/tty/serial/8250/8250_core 0xc7208c3a	serial8250_resume_port
-EXPORT_SYMBOL drivers/tty/serial/8250/8250_core 0xcc248d26	serial8250_suspend_port
-EXPORT_SYMBOL drivers/tty/serial/8250/8250_core 0xcefcd99a	serial8250_unregister_port
-EXPORT_SYMBOL drivers/tty/serial/8250/8250_core 0xd59db7a8	serial8250_set_isa_configurator
 EXPORT_SYMBOL drivers/usb/class/cdc-wdm 0x6b7386b4	usb_cdc_wdm_register
 EXPORT_SYMBOL drivers/usb/host/sl811-hcd 0x068ea499	sl811h_driver
 EXPORT_SYMBOL drivers/usb/otg/nop-usb-xceiv 0xa64a4cea	usb_nop_xceiv_unregister
@@ -5893,6 +5886,7 @@ EXPORT_SYMBOL vmlinux 0x8444180c	pcie_get_readrq
 EXPORT_SYMBOL vmlinux 0x844fc23d	jbd2_journal_extend
 EXPORT_SYMBOL vmlinux 0x846bcc01	dm_table_get
 EXPORT_SYMBOL vmlinux 0x8497cdaa	kern_path_create
+EXPORT_SYMBOL vmlinux 0x849c399b	serial8250_register_8250_port
 EXPORT_SYMBOL vmlinux 0x84b164cb	sb_min_blocksize
 EXPORT_SYMBOL vmlinux 0x84b183ae	strncmp
 EXPORT_SYMBOL vmlinux 0x84bd69bf	dq_data_lock
@@ -6348,6 +6342,7 @@ EXPORT_SYMBOL vmlinux 0xa244bf9f	blk_integrity_unregister
 EXPORT_SYMBOL vmlinux 0xa24e16fc	flock_lock_file_wait
 EXPORT_SYMBOL vmlinux 0xa250c838	param_get_charp
 EXPORT_SYMBOL vmlinux 0xa256ce5e	tty_port_put
+EXPORT_SYMBOL vmlinux 0xa25776da	serial8250_do_pm
 EXPORT_SYMBOL vmlinux 0xa2848c50	ecryptfs_get_auth_tok_key
 EXPORT_SYMBOL vmlinux 0xa2a5fd77	inet_ehash_secret
 EXPORT_SYMBOL vmlinux 0xa2bbed37	crash_shutdown_register
@@ -6421,6 +6416,7 @@ EXPORT_SYMBOL vmlinux 0xa720678c	lg_global_lock
 EXPORT_SYMBOL vmlinux 0xa7422542	elevator_init
 EXPORT_SYMBOL vmlinux 0xa74aa780	lease_get_mtime
 EXPORT_SYMBOL vmlinux 0xa7668b8f	blk_queue_make_request
+EXPORT_SYMBOL vmlinux 0xa7864766	serial8250_do_set_termios
 EXPORT_SYMBOL vmlinux 0xa78d9eb7	slhc_uncompress
 EXPORT_SYMBOL vmlinux 0xa79bb1a2	generic_file_buffered_write
 EXPORT_SYMBOL vmlinux 0xa7be39cd	pcibios_fixup_bus
@@ -6897,6 +6893,7 @@ EXPORT_SYMBOL vmlinux 0xc6e33460	scsi_release_buffers
 EXPORT_SYMBOL vmlinux 0xc6ed25bc	tcp_connect
 EXPORT_SYMBOL vmlinux 0xc702156b	param_get_ushort
 EXPORT_SYMBOL vmlinux 0xc71708b6	__sk_mem_schedule
+EXPORT_SYMBOL vmlinux 0xc7208c3a	serial8250_resume_port
 EXPORT_SYMBOL vmlinux 0xc7314629	pmac_suspend_agp_for_card
 EXPORT_SYMBOL vmlinux 0xc75d70f2	mpage_readpages
 EXPORT_SYMBOL vmlinux 0xc76cdb26	nf_ip_checksum
@@ -6971,6 +6968,7 @@ EXPORT_SYMBOL vmlinux 0xcc084c0e	ilookup5_nowait
 EXPORT_SYMBOL vmlinux 0xcc17504d	_raw_read_unlock_irqrestore
 EXPORT_SYMBOL vmlinux 0xcc1a41a4	gnet_stats_copy_queue
 EXPORT_SYMBOL vmlinux 0xcc1efb3f	kfree_skb_partial
+EXPORT_SYMBOL vmlinux 0xcc248d26	serial8250_suspend_port
 EXPORT_SYMBOL vmlinux 0xcc2dd81d	vlan_vids_del_by_dev
 EXPORT_SYMBOL vmlinux 0xcc3491a5	cpufreq_cooling_unregister
 EXPORT_SYMBOL vmlinux 0xcc36f32e	fb_unregister_client
@@ -7015,6 +7013,7 @@ EXPORT_SYMBOL vmlinux 0xcee909aa	gnet_stats_start_copy_compat
 EXPORT_SYMBOL vmlinux 0xcee9345d	serio_reconnect
 EXPORT_SYMBOL vmlinux 0xcee9f2a6	journal_flush
 EXPORT_SYMBOL vmlinux 0xcef51982	kstrtou16
+EXPORT_SYMBOL vmlinux 0xcefcd99a	serial8250_unregister_port
 EXPORT_SYMBOL vmlinux 0xcf6e6549	sock_no_bind
 EXPORT_SYMBOL vmlinux 0xcf703fe0	pci_set_power_state
 EXPORT_SYMBOL vmlinux 0xcf8ee148	thermal_zone_device_update
@@ -7119,6 +7118,7 @@ EXPORT_SYMBOL vmlinux 0xd50995d9	__task_pid_nr_ns
 EXPORT_SYMBOL vmlinux 0xd547bcd7	mii_check_media
 EXPORT_SYMBOL vmlinux 0xd54a70a2	from_kqid_munged
 EXPORT_SYMBOL vmlinux 0xd57c29ac	scsi_prep_state_check
+EXPORT_SYMBOL vmlinux 0xd59db7a8	serial8250_set_isa_configurator
 EXPORT_SYMBOL vmlinux 0xd5b1376d	register_shrinker
 EXPORT_SYMBOL vmlinux 0xd5b2e52a	single_step_exception
 EXPORT_SYMBOL vmlinux 0xd5cea414	inode_change_ok
@@ -9355,11 +9355,6 @@ EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xe59c52da	dev_attr_usbip_deb
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xe8125014	usbip_dump_urb
 EXPORT_SYMBOL_GPL drivers/staging/usbip/usbip-core 0xf36947cd	usbip_stop_eh
 EXPORT_SYMBOL_GPL drivers/tty/n_tracesink 0x585ebaac	n_tracesink_datadrain
-EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_core 0x3469260e	serial8250_handle_irq
-EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_core 0x95222d0f	serial8250_tx_chars
-EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_core 0xa156ba56	serial8250_rx_chars
-EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_core 0xe329acac	serial8250_modem_status
-EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_core 0xf2c3f61b	serial8250_clear_and_reinit_fifos
 EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_pci 0x31c7970f	pciserial_suspend_ports
 EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_pci 0xbfbc5434	pciserial_resume_ports
 EXPORT_SYMBOL_GPL drivers/tty/serial/8250/8250_pci 0xc76508f8	pciserial_init_ports
@@ -11313,6 +11308,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x340203be	ip_local_out
 EXPORT_SYMBOL_GPL vmlinux 0x3430fc81	pci_cfg_access_trylock
 EXPORT_SYMBOL_GPL vmlinux 0x3441c3d6	gpio_set_value_cansleep
 EXPORT_SYMBOL_GPL vmlinux 0x344acb19	sk_unattached_filter_destroy
+EXPORT_SYMBOL_GPL vmlinux 0x3469260e	serial8250_handle_irq
 EXPORT_SYMBOL_GPL vmlinux 0x347fd4b3	eventfd_ctx_get
 EXPORT_SYMBOL_GPL vmlinux 0x34ac50a4	visitorl
 EXPORT_SYMBOL_GPL vmlinux 0x34b17365	pm_runtime_barrier
@@ -12287,6 +12283,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x94a7227a	debugfs_create_blob
 EXPORT_SYMBOL_GPL vmlinux 0x94abb745	sprint_oid
 EXPORT_SYMBOL_GPL vmlinux 0x94ef4d05	cpci_hp_stop
 EXPORT_SYMBOL_GPL vmlinux 0x951d403d	ata_link_online
+EXPORT_SYMBOL_GPL vmlinux 0x95222d0f	serial8250_tx_chars
 EXPORT_SYMBOL_GPL vmlinux 0x952664c5	do_exit
 EXPORT_SYMBOL_GPL vmlinux 0x952d7957	rio_request_inb_mbox
 EXPORT_SYMBOL_GPL vmlinux 0x9559fec9	rio_map_inb_region
@@ -12413,6 +12410,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xa0cb1adf	pci_sriov_migration
 EXPORT_SYMBOL_GPL vmlinux 0xa0f67d90	crypto_tfm_in_queue
 EXPORT_SYMBOL_GPL vmlinux 0xa14a8c77	__inet_lookup_listener
 EXPORT_SYMBOL_GPL vmlinux 0xa152801a	stmpe_reg_read
+EXPORT_SYMBOL_GPL vmlinux 0xa156ba56	serial8250_rx_chars
 EXPORT_SYMBOL_GPL vmlinux 0xa1af57cd	fib_rules_register
 EXPORT_SYMBOL_GPL vmlinux 0xa1bb7ff0	pwmchip_add
 EXPORT_SYMBOL_GPL vmlinux 0xa1bd7822	__tracepoint_block_bio_complete
@@ -13045,6 +13043,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xe30fac88	ktime_get_monotonic_offset
 EXPORT_SYMBOL_GPL vmlinux 0xe3101a93	__class_register
 EXPORT_SYMBOL_GPL vmlinux 0xe3105286	kobject_create_and_add
 EXPORT_SYMBOL_GPL vmlinux 0xe316b343	gen_pool_avail
+EXPORT_SYMBOL_GPL vmlinux 0xe329acac	serial8250_modem_status
 EXPORT_SYMBOL_GPL vmlinux 0xe33088ca	crypto_alloc_instance2
 EXPORT_SYMBOL_GPL vmlinux 0xe34b83c6	spi_bus_type
 EXPORT_SYMBOL_GPL vmlinux 0xe35172a9	spi_add_device
@@ -13187,6 +13186,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xf2859383	dev_pm_qos_update_request
 EXPORT_SYMBOL_GPL vmlinux 0xf2870ba2	crypto_lookup_skcipher
 EXPORT_SYMBOL_GPL vmlinux 0xf288b4ef	fuse_dev_operations
 EXPORT_SYMBOL_GPL vmlinux 0xf2bc4ace	css_lookup
+EXPORT_SYMBOL_GPL vmlinux 0xf2c3f61b	serial8250_clear_and_reinit_fifos
 EXPORT_SYMBOL_GPL vmlinux 0xf2cfba70	ipv4_redirect
 EXPORT_SYMBOL_GPL vmlinux 0xf2fca922	uart_parse_options
 EXPORT_SYMBOL_GPL vmlinux 0xf30e105d	ezx_pcap_write
