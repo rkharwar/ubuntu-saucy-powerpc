@@ -1,4 +1,6 @@
-linux-ppc (3.8.0-0.1) raring; urgency=low
+linux-ppc (3.8.0-0.2) raring; urgency=low
+
+  * [Config] Sync configs
 
   [ Ubuntu: 3.8.0-0.1 ]
 
