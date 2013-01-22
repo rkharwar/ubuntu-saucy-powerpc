@@ -66,11 +66,11 @@ Description: Header files related to Linux kernel version PKGVER
  that want the latest kernel headers. Please read
  /usr/share/doc/SRCPKGNAME-headers-PKGVER-ABINUM/debian.README.gz for details
 
-Package: linux-tools-PKGVER-ABINUM
+Package: SRCPKGNAME-tools-PKGVER-ABINUM
 Architecture: powerpc
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, ${shlibs:Depends}, linux-tools-common
+Depends: ${misc:Depends}, ${shlibs:Depends}, SRCPKGNAME-tools-common
 Description: Linux kernel version specific tools for version PKGVER-ABINUM
  This package provides the architecture dependant parts for kernel
  version locked tools (such as perf and x86_energy_perf_policy) for
