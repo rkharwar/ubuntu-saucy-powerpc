@@ -1,3 +1,55 @@
+linux-ppc (3.8.0-1.3) raring; urgency=low
+
+  [ Adam Conrad ]
+
+  * Sync build-deps with master to avoid future FTBFS
+  * Fix up linux-tools -> SRCPKGNAME-tools rename
+  * Add a debian/source/options file to ignore cruft
+
+  [ Andy Whitcroft ]
+
+  * [Config] enable various HVC consoles
+    - LP: #1102206
+  * [Config] linux-image-* should Suggests: linux-headers-*
+    - LP: #1029730
+
+  [ Ubuntu: 3.8.0-1.5 ]
+
+  * Release Tracking Bug
+    - LP: #1101235
+  * SAUCE: Input: add support for Cypress PS/2 Trackpads
+    - LP: #978807
+  * SAUCE: Input: increase struct ps2dev cmdbuf[] to 8 bytes
+  * SAUCE: Input: Cypress PS/2 Trackpad simulated multitouch
+  * [Config] Add CONFIG_PS2_CYPRESS
+  * rebase to v3.8-rc4
+  * rebase to v3.8-rc4
+    - LP: #1095315
+    - LP: #886975
+    - LP: #1086921
+
+  [ Ubuntu: 3.8.0-0.4 ]
+
+  * [Config] Update CONFIG_TOUCHSCREEN_EGALAX build annotation
+  * [Config] Update CONFIG_IIO build annotation
+  * [Config] Update CONFIG_TOUCHSCREEN_EETI annotation
+  * [Config] Remove CONFIG_SPI_DW_MMIO annotation
+  * [Config] Remove CONFIG_SPI_PL022 annotation
+  * [Config] Update CONFIG_EZX_PCAP annotation
+  * [Config] Update CONFIG_SENSORS_AK8975 annotation
+  * [Config] Disable CONFIG_DRM_MGAG200
+    - LP: #1042903
+
+  [ Ubuntu: 3.8.0-0.3 ]
+
+  * Revert "SAUCE: (no-up) trace: add trace events for open(), exec() and
+    uselib()"
+  * SAUCE: (no-up) trace: add trace events for open(), exec() and uselib()
+    (for v3.7+)
+    - LP: #1085766, #462111
+
+ -- Ben Collins <ben.c@servergy.com>  Tue, 22 Jan 2013 20:41:25 -0500
+
 linux-ppc (3.8.0-0.2) raring; urgency=low
 
   * [Config] Sync configs
