@@ -425,7 +425,7 @@ static t_LnxWrpFmDev * ReadFmDevTreeNode (struct platform_device *of_dev)
     struct resource     res;
     const uint32_t      *uint32_prop;
     int                 _errno=0, lenp;
-    static struct of_device_id dpa_eth_node_of_match[] __devinitdata = {
+    static struct of_device_id dpa_eth_node_of_match[] = {
         { .compatible = "fsl,dpa-ethernet", },
         { /* end of list */ },
     };
@@ -908,7 +908,7 @@ static void FreeFmDev(t_LnxWrpFmDev  *p_LnxWrpFmDev)
 /* FMan character device file operations */
 extern struct file_operations fm_fops;
 
-static int /*__devinit*/ fm_probe(struct platform_device *of_dev)
+static int fm_probe(struct platform_device *of_dev)
 {
     t_LnxWrpFmDev   *p_LnxWrpFmDev;
 
@@ -994,7 +994,7 @@ static int /*__devinit*/ fm_probe(struct platform_device *of_dev)
     return 0;
 }
 
-static int __devexit fm_remove(struct platform_device *of_dev)
+static int fm_remove(struct platform_device *of_dev)
 {
     t_LnxWrpFmDev   *p_LnxWrpFmDev;
     struct device   *dev;
@@ -1021,7 +1021,7 @@ static int __devexit fm_remove(struct platform_device *of_dev)
     return 0;
 }
 
-static const struct of_device_id fm_match[] __devinitconst = {
+static const struct of_device_id fm_match[] = {
     {
         .compatible    = "fsl,fman"
     },
@@ -1038,7 +1038,7 @@ static struct platform_driver fm_driver = {
         .owner          = THIS_MODULE,
     },
     .probe          = fm_probe,
-    .remove         = __devexit_p(fm_remove)
+    .remove         = fm_remove
 };
 
 t_Handle LNXWRP_FM_Init(void)
