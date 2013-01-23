@@ -272,7 +272,7 @@ static int of_fsl_pme_remove(struct platform_device *ofdev)
 	return 0;
 }
 
-static int __devinit of_fsl_pme_probe(struct platform_device *ofdev)
+static int of_fsl_pme_probe(struct platform_device *ofdev)
 {
 	int ret, err = 0;
 	void __iomem *regs;
@@ -440,7 +440,7 @@ static struct platform_driver of_fsl_pme_driver = {
 		.of_match_table = of_fsl_pme_ids,
 	},
 	.probe = of_fsl_pme_probe,
-	.remove      = __devexit_p(of_fsl_pme_remove),
+	.remove      = of_fsl_pme_remove,
 };
 
 static int pme2_ctrl_init(void)
