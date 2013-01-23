@@ -292,7 +292,7 @@ irqreturn_t pamu_av_isr(int irq, void *arg)
 	/* NOTREACHED */
 }
 
-static int __devinit fsl_of_pamu_probe(struct platform_device *dev)
+static int fsl_of_pamu_probe(struct platform_device *dev)
 {
 	void __iomem *pamu_regs, *guts_regs;
 	u32 pamubypenr, pamu_counter;
