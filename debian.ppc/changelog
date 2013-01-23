@@ -1,4 +1,12 @@
-linux-ppc (3.8.0-1.4) raring; urgency=low
+linux-ppc (3.8.0-1.5) raring; urgency=low
+
+  [ Ben Collins ]
+
+  * SAUCE: Remove __devinit and __devexit annotations
+  * SAUCE: Add op emulation to allow newer kernels to run under e500
+    qemu-kvm
+
+  [ PPC Ubuntu: 3.8.0-1.4 ]
 
   [ Adam Conrad ]
 
