@@ -306,7 +306,7 @@ static t_Error PortInit (t_FmTestPort *p_FmTestPort, ioc_fmt_port_param_t *p_Par
     const uint32_t      *uint32_prop;
     int                 _errno=0, lenp;
     uint32_t            i;
-    static struct of_device_id fm_node_of_match[] __devinitdata = {
+    static struct of_device_id fm_node_of_match[] = {
         { .compatible = "fsl,fman", },
         { /* end of list */ },
     };
