@@ -999,7 +999,7 @@ static void FreeFmPortDev(t_LnxWrpFmPortDev *p_LnxWrpFmPortDev)
 			      p_LnxWrpFmPortDev->memSize);
 }
 
-static int /*__devinit*/ fm_port_probe(struct platform_device *of_dev)
+static int fm_port_probe(struct platform_device *of_dev)
 {
 	t_LnxWrpFmPortDev *p_LnxWrpFmPortDev;
 	t_LnxWrpFmDev *p_LnxWrpFmDev;
@@ -1095,7 +1095,7 @@ static int /*__devinit*/ fm_port_probe(struct platform_device *of_dev)
 	return 0;
 }
 
-static int __devexit fm_port_remove(struct platform_device *of_dev)
+static int fm_port_remove(struct platform_device *of_dev)
 {
 	t_LnxWrpFmPortDev *p_LnxWrpFmPortDev;
 	t_LnxWrpFmDev *p_LnxWrpFmDev;
@@ -1117,7 +1117,7 @@ static int __devexit fm_port_remove(struct platform_device *of_dev)
 	return 0;
 }
 
-static const struct of_device_id fm_port_match[] __devinitconst = {
+static const struct of_device_id fm_port_match[] = {
 	{
 	 .compatible = "fsl,fman-port-oh"},
 	{
@@ -1143,7 +1143,7 @@ static struct platform_driver fm_port_driver = {
 		   .owner = THIS_MODULE,
 		   },
 	.probe = fm_port_probe,
-	.remove = __devexit_p(fm_port_remove)
+	.remove = fm_port_remove
 };
 
 
