@@ -187,7 +187,7 @@ int __cold dpa_set_pauseparam(struct net_device *net_dev, struct ethtool_pausepa
 	return 0;
 }
 
-const struct ethtool_ops dpa_ethtool_ops __devinitconst = {
+const struct ethtool_ops dpa_ethtool_ops = {
 	.get_settings		= dpa_get_settings,
 	.set_settings		= dpa_set_settings,
 	.get_drvinfo		= dpa_get_drvinfo,

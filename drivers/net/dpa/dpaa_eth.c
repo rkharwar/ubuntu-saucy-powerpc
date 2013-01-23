@@ -116,7 +116,7 @@ static uint8_t debug = -1;
 module_param(debug, byte, S_IRUGO);
 MODULE_PARM_DESC(debug, "Module/Driver verbosity level");
 
-static uint16_t __devinitdata tx_timeout = 1000;
+static uint16_t tx_timeout = 1000;
 module_param(tx_timeout, ushort, S_IRUGO);
 MODULE_PARM_DESC(tx_timeout, "The Tx timeout in ms");
 
@@ -329,7 +329,7 @@ static int dpa_make_shared_pool(struct dpa_bp *bp)
 	return 0;
 }
 
-static int __devinit __must_check __attribute__((nonnull))
+static int __must_check __attribute__((nonnull))
 dpa_bp_alloc(struct dpa_bp *dpa_bp)
 {
 	int err = 0;
@@ -451,7 +451,7 @@ dpa_bp_free(struct dpa_priv_s *priv, struct dpa_bp *dpa_bp)
 
 /* QM */
 
-static int __devinit __must_check __attribute__((nonnull))
+static int __must_check __attribute__((nonnull))
 _dpa_fq_alloc(struct list_head *list, struct dpa_fq *dpa_fq)
 {
 	int			 _errno;
@@ -1607,35 +1607,35 @@ static void egress_ern(struct qman_portal	*portal,
 	dev_kfree_skb_any(skb);
 }
 
-static const struct qman_fq rx_shared_fq __devinitconst = {
+static const struct qman_fq rx_shared_fq = {
 		.cb = {shared_rx_dqrr, NULL, NULL, NULL}
 };
-static const struct qman_fq rx_private_defq __devinitconst = {
+static const struct qman_fq rx_private_defq = {
 		.cb = {ingress_rx_default_dqrr, NULL, NULL, NULL}
 };
-static const struct qman_fq rx_private_errq __devinitconst = {
+static const struct qman_fq rx_private_errq = {
 		.cb = {ingress_rx_error_dqrr, NULL, NULL, NULL}
 };
-static const struct qman_fq tx_private_defq __devinitconst = {
+static const struct qman_fq tx_private_defq = {
 		.cb = {ingress_tx_default_dqrr, NULL, NULL, NULL}
 };
-static const struct qman_fq tx_private_errq __devinitconst = {
+static const struct qman_fq tx_private_errq = {
 		.cb = {ingress_tx_error_dqrr, NULL, NULL, NULL}
 };
-static const struct qman_fq dummyq __devinitconst = {
+static const struct qman_fq dummyq = {
 		.cb = {NULL, NULL, NULL, NULL}
 };
-static const struct qman_fq private_egress_fq __devinitconst = {
+static const struct qman_fq private_egress_fq = {
 	.cb = {NULL, egress_ern, NULL, NULL}
 };
-static const struct qman_fq shared_egress_fq __devinitconst = {
+static const struct qman_fq shared_egress_fq = {
 	.cb = {NULL, shared_ern, NULL, NULL}
 };
 
 #ifdef CONFIG_DPAA_ETH_UNIT_TESTS
-static bool __devinitdata tx_unit_test_passed = true;
+static bool tx_unit_test_passed = true;
 
-static void __devinit tx_unit_test_ern(struct qman_portal	*portal,
+static void tx_unit_test_ern(struct qman_portal	*portal,
 		       struct qman_fq		*fq,
 		       const struct qm_mr_entry	*msg)
 {
@@ -1664,11 +1664,11 @@ static void __devinit tx_unit_test_ern(struct qman_portal	*portal,
 	kfree_skb(skb);
 }
 
-static unsigned char __devinitdata *tx_unit_skb_head;
-static unsigned char __devinitdata *tx_unit_skb_end;
-static int __devinitdata tx_unit_tested;
+static unsigned char *tx_unit_skb_head;
+static unsigned char *tx_unit_skb_end;
+static int tx_unit_tested;
 
-static enum qman_cb_dqrr_result __devinit tx_unit_test_dqrr(
+static enum qman_cb_dqrr_result tx_unit_test_dqrr(
 		struct qman_portal *portal,
 		struct qman_fq *fq,
 		const struct qm_dqrr_entry *dq)
@@ -1737,15 +1737,15 @@ out:
 	return qman_cb_dqrr_consume;
 }
 
-static const struct qman_fq tx_unit_test_fq __devinitconst = {
+static const struct qman_fq tx_unit_test_fq = {
 	.cb = {tx_unit_test_dqrr, tx_unit_test_ern, NULL, NULL}
 };
 
-static struct __devinitdata dpa_fq unit_fq;
+static struct dpa_fq unit_fq;
 
-static bool __devinitdata tx_unit_test_ran; /* Starts as false */
+static bool tx_unit_test_ran; /* Starts as false */
 
-static int __devinit dpa_tx_unit_test(struct net_device *net_dev)
+static int dpa_tx_unit_test(struct net_device *net_dev)
 {
 	/* Create a new FQ */
 	struct dpa_priv_s *priv = netdev_priv(net_dev);
@@ -1982,13 +1982,13 @@ static void __cold dpa_timeout(struct net_device *net_dev)
 	percpu_priv->stats.tx_errors++;
 }
 
-static int __devinit dpa_bp_cmp(const void *dpa_bp0, const void *dpa_bp1)
+static int dpa_bp_cmp(const void *dpa_bp0, const void *dpa_bp1)
 {
 	return ((struct dpa_bp *)dpa_bp0)->size -
 			((struct dpa_bp *)dpa_bp1)->size;
 }
 
-static struct dpa_bp * __devinit __cold __must_check __attribute__((nonnull))
+static struct dpa_bp * __cold __must_check __attribute__((nonnull))
 dpa_bp_probe(struct platform_device *_of_dev, size_t *count)
 {
 	int			 i, lenp, na, ns;
@@ -2149,7 +2149,7 @@ static int dpa_bp_create(struct net_device *net_dev, struct dpa_bp *dpa_bp,
 	return 0;
 }
 
-static struct mac_device * __devinit __cold __must_check
+static struct mac_device * __cold __must_check
 __attribute__((nonnull))
 dpa_mac_probe(struct platform_device *_of_dev)
 {
@@ -2215,7 +2215,7 @@ dpa_mac_probe(struct platform_device *_of_dev)
 	return mac_dev;
 }
 
-static const char fsl_qman_frame_queues[][25] __devinitconst = {
+static const char fsl_qman_frame_queues[][25] = {
 	[RX] = "fsl,qman-frame-queues-rx",
 	[TX] = "fsl,qman-frame-queues-tx"
 };
@@ -2333,7 +2333,7 @@ static const struct net_device_ops dpa_shared_ops = {
 	.ndo_do_ioctl = dpa_ioctl,
 };
 
-static int __devinit dpa_get_channel(struct device *dev,
+static int dpa_get_channel(struct device *dev,
 					struct device_node *dpa_node)
 {
 	struct device_node *dev_node;
@@ -2362,12 +2362,12 @@ struct fqid_cell {
 	uint32_t count;
 };
 
-static const struct fqid_cell default_fqids[][3] __devinitconst = {
+static const struct fqid_cell default_fqids[][3] = {
 	[RX] = { {0, 1}, {0, 1}, {0, DPAA_ETH_RX_QUEUES} },
 	[TX] = { {0, 1}, {0, 1}, {0, DPAA_ETH_TX_QUEUES} }
 };
 
-static int __devinit
+static int 
 dpa_fq_probe(struct platform_device *_of_dev, struct list_head *list,
 		struct dpa_fq **defq, struct dpa_fq **errq,
 		struct dpa_fq **fqs, int ptype)
@@ -2581,7 +2581,7 @@ static void dpa_setup_ingress_queues(struct dpa_priv_s *priv,
 	}
 }
 
-static void __devinit
+static void 
 dpaa_eth_init_tx_port(struct fm_port *port, struct dpa_fq *errq,
 		struct dpa_fq *defq, bool has_timer)
 {
@@ -2591,7 +2591,7 @@ dpaa_eth_init_tx_port(struct fm_port *port, struct dpa_fq *errq,
 			has_timer);
 }
 
-static void __devinit
+static void 
 dpaa_eth_init_rx_port(struct fm_port *port, struct dpa_bp *bp, size_t count,
 		struct dpa_fq *errq, struct dpa_fq *defq, bool has_timer)
 {
@@ -2847,15 +2847,15 @@ static ssize_t dpaa_eth_show_fqids(struct device *dev,
 static DEVICE_ATTR(fqids, S_IRUGO, dpaa_eth_show_fqids, NULL);
 
 
-static void __devinit dpaa_eth_sysfs_init(struct device *dev)
+static void dpaa_eth_sysfs_init(struct device *dev)
 {
 	if (device_create_file(dev, &dev_attr_device_addr))
 		dev_err(dev, "Error creating dpaa_eth addr file\n");
 	if (device_create_file(dev, &dev_attr_fqids))
 		dev_err(dev, "Error creating dpaa_eth fqids file\n");
 }
-static const struct of_device_id dpa_match[] __devinitconst ;
-static int __devinit
+static const struct of_device_id dpa_match[] ;
+static int 
 dpaa_eth_probe(struct platform_device *_of_dev)
 {
 	int err, i;
@@ -3091,7 +3091,7 @@ bp_probe_failed:
 	return err;
 }
 
-static const struct of_device_id dpa_match[] __devinitconst = {
+static const struct of_device_id dpa_match[] = {
 	{
 		.compatible	= "fsl,dpa-ethernet"
 	},
@@ -3102,7 +3102,7 @@ static const struct of_device_id dpa_match[] __devinitconst = {
 };
 MODULE_DEVICE_TABLE(of, dpa_match);
 
-static int __devexit __cold dpa_remove(struct platform_device *of_dev)
+static int __cold dpa_remove(struct platform_device *of_dev)
 {
 	int			err;
 	struct device		*dev;
@@ -3143,7 +3143,7 @@ static struct platform_driver dpa_driver = {
 		.owner		= THIS_MODULE,
 	},
 	.probe		= dpaa_eth_probe,
-	.remove		= __devexit_p(dpa_remove)
+	.remove		= dpa_remove
 };
 
 static int __init __cold dpa_load(void)

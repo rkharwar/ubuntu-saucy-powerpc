@@ -2486,7 +2486,7 @@ static int fm_open(struct inode *inode, struct file *file)
     unsigned int        major = imajor(inode);
     unsigned int        minor = iminor(inode);
     struct device_node  *fm_node;
-    static struct of_device_id fm_node_of_match[] __devinitdata = {
+    static struct of_device_id fm_node_of_match[] = {
         { .compatible = "fsl,fman", },
         { /* end of list */ },
     };
