@@ -187,6 +187,7 @@ aiptek
 aircable
 airo
 airo_cs
+airport
 ak8975
 alauda
 algif_hash
@@ -203,14 +204,20 @@ ambassador
 amc6821
 amd5536udc
 amd8111e
+ams
 ams369fg06
 analog
 anatop-regulator
+ans-lcd
 ansi_cprng
 anubis
 aoe
 apds9802als
 apds990x
+apm-emulation
+apm-power
+apm_emu
+apm_power
 appledisplay
 appletalk
 appletouch
@@ -272,11 +279,9 @@ atl1e
 atl2
 atm
 atmel
-atmel-pwm-bl
 atmel_cs
 atmel_mxt_ts
 atmel_pci
-atmel_pwm
 atmtcp
 atp870u
 atxp1
@@ -339,6 +344,7 @@ blowfish_generic
 bluecard_cs
 bluetooth
 bma150
+bmac
 bmp085-i2c
 bmp085-spi
 bna
@@ -348,7 +354,6 @@ bnx2fc
 bnx2i
 bnx2x
 bonding
-booke_wdt
 bpa10x
 bpck
 bpck6
@@ -391,10 +396,6 @@ c67x00
 c_can
 c_can_pci
 c_can_platform
-caam
-caamalg
-caamhash
-caamrng
 cachefiles
 cafe_ccic
 cafe_nand
@@ -486,7 +487,6 @@ cordic
 core
 cp210x
 cpia2
-cpm_uart
 cpqarray
 cpu-notifier-error-inject
 cpufreq_stats
@@ -585,7 +585,6 @@ decnet
 deflate
 defxx
 denali
-denali_dt
 denali_pci
 des_generic
 dgrp
@@ -638,8 +637,6 @@ docg3
 docg4
 docprobe
 donauboe
-dpa_uio
-dpaa_1588
 dpt_i2o
 drbd
 drm
@@ -714,7 +711,6 @@ dvb-usb-vp702x
 dvb-usb-vp7045
 dvb_usb_cypress_firmware
 dvb_usb_v2
-dw_dmac
 dwc3
 dwc3-exynos
 dwc3-omap
@@ -803,7 +799,6 @@ extcon-arizona
 extcon-gpio
 extcon-max77693
 extcon-max8997
-exynos-rng
 ezusb
 f2fs
 f75375s
@@ -834,7 +829,6 @@ firewire-serial
 fit2
 fit3
 fixed
-flexcan
 floppy
 fm801-gp
 fm_drv
@@ -844,18 +838,9 @@ fore_200e
 freevxfs
 friq
 frpw
-fs_enet
 fsa9480
 fscache
-fsl-diu-fb
 fsl_elbc_nand
-fsl_hypervisor
-fsl_ifc_nand
-fsl_pq_mdio
-fsl_qe_udc
-fsl_upm
-fsl_usb2_udc
-fsldma
 ft1000
 ft1000_pcmcia
 ftdi-elan
@@ -863,6 +848,7 @@ ftdi_sio
 ftl
 fujitsu_ts
 funsoft
+fusb300_udc
 g450_pll
 g760a
 g_acm_ms
@@ -896,8 +882,6 @@ gf128mul
 gf2k
 gfs2
 ghash-generic
-gianfar_driver
-gianfar_ptp
 gigaset
 girbil-sir
 gl518sm
@@ -1083,6 +1067,7 @@ hid-sensor-gyro-3d
 hid-sensor-hub
 hid-sensor-iio-common
 hid-sensor-magn-3d
+hid-sensor-trigger
 hid-sjoy
 hid-sony
 hid-speedlink
@@ -1098,6 +1083,7 @@ hid-wiimote
 hid-zpff
 hid-zydacron
 hidp
+hifn_795x
 hih6130
 hisax
 hisax_fcpcipnp
@@ -1136,15 +1122,14 @@ i2c-ali15x3
 i2c-amd756
 i2c-amd8111
 i2c-cbus-gpio
-i2c-cpm
 i2c-designware-core
 i2c-designware-pci
-i2c-designware-platform
 i2c-dev
 i2c-diolan-u2c
 i2c-eg20t
 i2c-gpio
 i2c-hid
+i2c-hydra
 i2c-i801
 i2c-intel-mid
 i2c-isch
@@ -1429,7 +1414,6 @@ ldusb
 lec
 leds-88pm860x
 leds-adp5520
-leds-atmel-pwm
 leds-bd2802
 leds-blinkm
 leds-da903x
@@ -1581,11 +1565,13 @@ mac-inuit
 mac-roman
 mac-romanian
 mac-turkish
+mac53c94
 mac80211
 mac80211_hwsim
 mac802154
 mac_hid
 macb
+mace
 macvlan
 macvtap
 magellan
@@ -1675,14 +1661,13 @@ megaraid_mm
 megaraid_sas
 mem2mem_testdev
 memstick
+mesh
 metro-usb
 metronomefb
 mfd
 mga
-mgag200
 michael_mic
 microtek
-mii-bitbang
 minix
 mip6
 mk712
@@ -1697,7 +1682,6 @@ mos7720
 mos7840
 moto_modem
 moxa
-mpc85xx_edac
 mpoa
 mpr121_touchkey
 mpt2sas
@@ -2039,6 +2023,7 @@ pcmciamtd
 pcnet32
 pcnet_cs
 pcrypt
+pcspkr
 pcwd_pci
 pcwd_usb
 pd
@@ -2077,6 +2062,7 @@ pmbus
 pmbus_core
 pmc551
 pmcraid
+pmu_battery
 pn533
 pn544_i2c
 pn_pep
@@ -2142,6 +2128,7 @@ r852
 r8712u
 r8a66597-hcd
 r8a66597-udc
+rack-meter
 radeon
 radio-i2c-si470x
 radio-keene
@@ -2285,7 +2272,6 @@ rfc1051
 rfc1201
 rfcomm
 rfd_ftl
-rfkill-gpio
 rfkill-regulator
 ring_sw
 rio500
@@ -2429,8 +2415,6 @@ saa7185
 saa7706h
 safe_serial
 salsa20_generic
-samsung-keypad
-sata_fsl
 sata_highbank
 sata_inic162x
 sata_mv
@@ -2568,6 +2552,13 @@ snd-ali5451
 snd-aloop
 snd-als300
 snd-als4000
+snd-aoa
+snd-aoa-codec-onyx
+snd-aoa-codec-tas
+snd-aoa-codec-toonie
+snd-aoa-fabric-layout
+snd-aoa-i2sbus
+snd-aoa-soundbus
 snd-atiixp
 snd-atiixp-modem
 snd-au8810
@@ -2655,6 +2646,7 @@ snd-pcm
 snd-pcxhr
 snd-pdaudiocf
 snd-portman2x4
+snd-powermac
 snd-pt2258
 snd-rawmidi
 snd-riptide
@@ -2838,7 +2830,6 @@ spi-bitbang
 spi-butterfly
 spi-dw
 spi-dw-midpci
-spi-dw-mmio
 spi-gpio
 spi-lm70llp
 spi-oc-tiny
@@ -2891,6 +2882,7 @@ sunkbd
 sunrpc
 svcrdma
 svgalib
+swim3
 sx8
 sym53c500_cs
 sym53c8xx
@@ -2907,7 +2899,6 @@ sysfillrect
 sysimgblt
 sysv
 t1pci
-talitos
 target_core_file
 target_core_iblock
 target_core_mod
@@ -2968,6 +2959,7 @@ test-kstrtox
 test_power
 tg3
 tgr192
+therm_windtunnel
 thmc50
 ti-adc081c
 ti_am335x_adc
@@ -3110,6 +3102,7 @@ ums-realtek
 ums-sddr09
 ums-sddr55
 ums-usbat
+uninorth-agp
 unix_diag
 upd64031a
 upd64083
@@ -3234,7 +3227,6 @@ w83795
 w83977af_ir
 w83l785ts
 w83l786ng
-w90p910_ts
 w9966
 wacom
 wacom_i2c
@@ -3244,11 +3236,13 @@ wanrouter
 wanxl
 warrior
 wbsd
+wdrtas
 wdt_pci
 whc-rc
 whci
 whci-hcd
 whiteheat
+wil6210
 wimax
 winbond-840
 windfarm_core
@@ -3316,7 +3310,6 @@ xfrm_user
 xfs
 xgifb
 xgmac
-xgmac_mdio
 xilinx_ps2
 xilinx_uartps
 xirc2ps_cs
