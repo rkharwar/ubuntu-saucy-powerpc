@@ -1053,6 +1053,7 @@ hid-sensor-gyro-3d
 hid-sensor-hub
 hid-sensor-iio-common
 hid-sensor-magn-3d
+hid-sensor-trigger
 hid-sjoy
 hid-sony
 hid-speedlink
@@ -1650,7 +1651,6 @@ metro-usb
 metronomefb
 mfd
 mga
-mgag200
 michael_mic
 microtek
 minix
@@ -3234,6 +3234,7 @@ whc-rc
 whci
 whci-hcd
 whiteheat
+wil6210
 wimax
 winbond-840
 windfarm_ad7417_sensor
