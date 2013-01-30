@@ -1,3 +1,16 @@
+linux-ppc (3.8.0-2.6) raring; urgency=low
+
+  [ Ubuntu: 3.8.0-2.6 ]
+
+  * Fix up linux-tools -> SRCPKGNAME-tools rename
+  * [Config] re-disable CONFIG_SOUND_OSS
+    - LP: #1105230
+  * SAUCE: brcmsmac: fix tx status processing
+  * Release Tracking Bug
+    - LP: #1105104
+
+ -- Ben Collins <ben.c@servergy.com>  Tue, 29 Jan 2013 10:25:29 -0500
+
 linux-ppc (3.8.0-1.5) raring; urgency=low
 
   [ Ben Collins ]
