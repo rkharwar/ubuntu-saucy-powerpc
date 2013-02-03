@@ -1,3 +1,66 @@
+linux-ppc (3.8.0-3.7) raring; urgency=low
+
+  [ Ubuntu: 3.8.0-4.8 ]
+
+  * SAUCE: imx6: dts: Add IMX6Q AHCI support
+  * rebase to v3.8-rc6
+  * updateconfigs following rebase to v3.8-rc6
+  * Release Tracking Bug
+    - LP: #1112573
+  * SAUCE: imx6: enable sata clk if SATA_AHCI_PLATFORM
+  * [Config] SERIAL_AMBA_PL011=y (vexpress serial console)
+  * [Config] MMC_ARMMMCI=y (vexpress mmc)
+  * [Config] FB_ARMCLCD=y (vexpress framebuffer)
+  * [Config] CONFIG_MAC80211_MESSAGE_TRACING=y
+  * rebase to v3.8-rc6
+    - LP: #1107477
+
+  [ Ubuntu: 3.8.0-3.7 ]
+
+  * SAUCE: ARM: OMAP2+: add cpu id register to MAC address helper
+  * SAUCE: ARM: omap2 add mac address allocation register api
+  * SAUCE: ARM: omap2 panda register ethernet and wlan for automatic mac
+    allocation
+  * rebase to v3.8-rc5
+  * Release Tracking Bug
+    - LP: #1111486
+  * SAUCE: davinci: vpss: compilation fix
+  * [Config] enable TI OMAP4 support (Pandaboard/ES)
+  * [Config] OMAP_USB2=y (since TWL6030_USB depends on it)
+  * [Config] enable Freescale IMX6 support (SabreLite)
+  * [Config] SERIAL_IMX_CONSOLE=y
+  * [Config] MMC_*_IMX=y
+  * [Config] disable USB_SUSPEND
+  * [Config] USB_MXS_PHY=y
+  * [Config] USB_CHIPIDEA=y
+  * SAUCE: DTB: add support for multiple DTBs
+  * SAUCE: DTB: build imx6q-sabrelite
+  * SAUCE: DTB: build beaglexm
+  * SAUCE: DTB: build panda/panda es
+  * [Config] disable CPU_FREQ
+  * [Config] PANEL_TFP410=y (video DVI output)
+  * [Config] SND_OMAP_SOC*=y
+  * [Config] SND_IMX_SOC*=y
+  * [Config] I2C_IMX=y
+  * [Config] SPI_IMX=m
+  * [Config] Move 9p modules into generic package
+    - LP: #1107658
+  * SAUCE: ARM: OMAP2+: Limit omap initcalls to omap only on multiplatform
+    kernels
+  * SAUCE: ARM: OMAP2+: Use omap initcalls
+  * SAUCE: ARM: OMAP: Fix i2c cmdline initcall for multiplatform
+  * SAUCE: ARM: OMAP: Fix dmaengine init for multiplatform
+  * SAUCE: ARM: OMAP2+: Add multiplatform debug_ll support
+  * SAUCE: ARM: OMAP2+: Disable code that currently does not work with
+    multiplaform
+  * SAUCE: ARM: OMAP2+: Enable ARCH_MULTIPLATFORM support
+  * SAUCE: ARM: OMAP2+: Add minimal support for booting vexpress
+  * SAUCE: ARM: OMAP2+: Remove now obsolete uncompress.h and debug-macro.S
+  * rebase to v3.8-rc5
+    - LP: #1096789
+
+ -- Ben Collins <ben.c@servergy.com>  Sat, 02 Feb 2013 17:43:31 -0500
+
 linux-ppc (3.8.0-2.6) raring; urgency=low
 
   [ Ubuntu: 3.8.0-2.6 ]
