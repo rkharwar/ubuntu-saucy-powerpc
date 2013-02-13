@@ -1,3 +1,46 @@
+linux-ppc (3.8.0-4.8) raring; urgency=low
+
+  [ Ubuntu: 3.8.0-6.11 ]
+
+  * Release Tracking Bug
+    - LP: #1122071
+  * rebase to v3.8-rc7
+  * Add libaudit-dev as a build dependency
+  * Build perf with NO_LIBPYTHON=1 to avoid a python build dependency.
+  * [Config] Remove CONFIG_SATA_AHCI annotation
+
+  [ Ubuntu: 3.8.0-5.10 ]
+
+  * Release Tracking Bug
+    - LP: #1118568
+  * Bump ABI to fix install issue with 3.8.0-4.8.
+    Moving drivers/ata/*ahci* to linux-image caused an
+    install conflict with linux-image-extras without an
+    ABI bump.
+  * SAUCE: xen-pciback: rate limit error messages from
+    xen_pcibk_enable_msi{, x}()
+    - LP: #1117336
+    - CVE-2013-0231
+
+  [ Ubuntu: 3.8.0-4.9 ]
+
+  * d-i: Add mellanox ethernet drivers to nic-modules
+    - LP: #1015339
+  * SAUCE: ACPI: Add DMI entry for Sony VGN-FW41E_H
+    - LP: #1113547
+  * SAUCE: alx driver import script
+  * SAUCE: alx: Update to heads/master
+  * Release Tracking Bug
+    - LP: #1117673
+  * [debian] Remove dangling symlink from headers package
+    - LP: #1112442
+  * [config] CONFIG_ALX=m
+  * [Config] Add alx to d-i nic-modules
+  * [Config] CONFIG_SATA_AHCI=m
+    - LP: #1056563
+
+ -- Ben Collins <ben.c@servergy.com>  Wed, 13 Feb 2013 09:01:48 -0500
+
 linux-ppc (3.8.0-3.7) raring; urgency=low
 
   [ Ubuntu: 3.8.0-4.8 ]
