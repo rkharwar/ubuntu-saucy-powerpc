@@ -1900,7 +1900,6 @@ omninet
 on20
 on26
 onenand
-onenand_sim
 opencores-kbd
 openvswitch
 oprofile
@@ -2630,7 +2629,6 @@ snd-lx6464es
 snd-maestro3
 snd-mia
 snd-mixart
-snd-mixer-oss
 snd-mona
 snd-mpu401
 snd-mpu401-uart
