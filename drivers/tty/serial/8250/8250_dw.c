@@ -25,7 +25,9 @@
 #include <linux/of_platform.h>
 #include <linux/platform_device.h>
 #include <linux/slab.h>
+#ifdef CONFIG_ACPI
 #include <linux/acpi.h>
+#endif
 
 #include "8250.h"
 
@@ -145,6 +147,7 @@ static int dw8250_probe_of(struct uart_port *p)
 	return 0;
 }
 
+#ifdef CONFIG_ACPI
 static bool dw8250_acpi_dma_filter(struct dma_chan *chan, void *parm)
 {
 	return chan->chan_id == *(int *)parm;
@@ -231,6 +234,7 @@ static int dw8250_probe_acpi(struct uart_port *p)
 
 	return 0;
 }
+#endif /* CONFIG_ACPI */
 
 static void dw8250_setup_port(struct uart_8250_port *up)
 {
@@ -293,10 +297,12 @@ static int dw8250_probe(struct platform_device *pdev)
 		err = dw8250_probe_of(&uart.port);
 		if (err)
 			return err;
+#ifdef CONFIG_ACPI
 	} else if (ACPI_HANDLE(&pdev->dev)) {
 		err = dw8250_probe_acpi(&uart.port);
 		if (err)
 			return err;
+#endif
 	} else {
 		return -ENODEV;
 	}
@@ -356,19 +362,23 @@ static const struct of_device_id dw8250_of_match[] = {
 };
 MODULE_DEVICE_TABLE(of, dw8250_of_match);
 
+#ifdef CONFIG_ACPI
 static const struct acpi_device_id dw8250_acpi_match[] = {
 	{ "INT33C4", 100000000 },
 	{ "INT33C5", 100000000 },
 	{ },
 };
 MODULE_DEVICE_TABLE(acpi, dw8250_acpi_match);
+#endif
 
 static struct platform_driver dw8250_platform_driver = {
 	.driver = {
 		.name		= "dw-apb-uart",
 		.owner		= THIS_MODULE,
 		.of_match_table	= dw8250_of_match,
+#ifdef CONFIG_ACPI
 		.acpi_match_table = ACPI_PTR(dw8250_acpi_match),
+#endif
 	},
 	.probe			= dw8250_probe,
 	.remove			= dw8250_remove,
