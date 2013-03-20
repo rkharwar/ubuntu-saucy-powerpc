@@ -1,4 +1,10 @@
-linux-ppc (3.8.0-6.10) raring; urgency=low
+linux-ppc (3.8.0-6.11) raring; urgency=low
+
+  [ Ben Collins ]
+
+  * SAUCE: 8250: Wrap ACPI calls with ifdefs for non-ACPI systems
+
+  [ PPC-Ubuntu-3.8.0-6.10 follows ]
 
   [ Ubuntu: 3.8.0-13.23 ]
 
