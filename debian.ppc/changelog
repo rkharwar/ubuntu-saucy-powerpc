@@ -1,3 +1,110 @@
+linux-ppc (3.8.0-6.12) raring; urgency=low
+
+  [ Ben Collins ]
+
+  * [Config] Make ds3232 and udl built-in on e500mc
+
+  [ Ubuntu: 3.8.0-15.25 ]
+
+  * [Config] annotations -- track move to -generic for armhf
+  * [Config] annotations -- resync with updated armhf -generic flavour
+  * [Config] annotations -- clean up redundant annotations
+  * Revert "SAUCE: add option to hand off all kernel parameters to init"
+  * SAUCE: add option to hand off all kernel parameters to init
+    Clean up compile warnings.
+    - LP: #586386
+  * Revert "SAUCE: isapnp_init: make isa PNP scans occur async"
+  * SAUCE: isapnp_init: make isa PNP scans occur async
+    Clean up compile warnings.
+  * [Config] HIHGBANK=y
+  * [Config] SATA_HIGHBANK=y
+  * [Config] NET_CALXEDA_XGMAC=y
+  * [Config] EDAC_HIGHBANK_[MC|L2]=y
+  * SAUCE: cpufreq: check OF /cpus presence before dereferencing it
+  * [Config] CONFIG_CPU_IDLE_CALXEDA=y, CONFIG_SWP_EMULATE=y
+  * [Config] ARM_HIGHBANK_CPUFREQ=y
+  * [Config] CPU_IDLE_MULTIPLE_DRIVERS=y, CPU_FREQ_DEFAULT_GOV_ONDEMAND=y
+  * SAUCE: ARM: cache-l2x0: fix masking of RTL revision numbering and
+    set_debug init
+  * SAUCE: ahci: remove calxeda ahci controller
+  * SAUCE: cpuidle: calxeda: disable power gating by default
+  * SAUCE: net: calxedaxgmac: fix rx ring handling when OOM
+  * SAUCE: dm-raid45: Fix incompatible ptr assignments
+    Clean up compile warnings.
+  * [Config] Removed modules from ABI
+  * [Config] CONFIG_SATA_HIGHBANK=n for x86
+  * [Config] Remove highbank as a flavour
+  * [Config] CONFIG_MAILBOX=y
+  * SAUCE: acpi/video.c: Fix compile warnings
+  * SAUCE: apparmor: Fix compile warnings
+  * SAUCE: vesafb: Cleanup compile warnings
+  * Release Tracking Bug
+    - LP: #1161054
+  * i2c: iSMT: add Intel Avoton DeviceIDs
+    - LP: #1083965
+  * ARM: use device tree to get smp_twd clock
+  * clk / highbank: Prevent glitches in non-bypass reset mode
+  * ARM / highbank: add support for pl320 IPC
+  * cpufreq / highbank: add support for highbank cpufreq
+  * PM / OPP: switch exported symbols to GPL variant
+  * PM / OPP: Export more symbols for module usage
+  * mailbox, pl320-ipc: remove __init from probe function
+  * SAUCE: PCI: define macro for marvell vendor ID
+    - LP: #1159863
+  * SAUCE: PCI: fix system hang issue of Marvell SATA host controller
+    - LP: #1159863
+
+  [ Ubuntu: 3.8.0-14.24 ]
+
+  * [Config] rename omap flavour to generic
+  * [Config] USB_MUSB_HDRC=m
+  * SAUCE: mfd: omap-usb-host: Fix clk warnings at boot
+  * SAUCE: Revert "brcmsmac: support 4313iPA"
+    - LP: #1157190
+  * [Config] CONFIG_SERIAL_8250_DW=m across all arches
+    - LP: #1031162
+  * [debian] Build extras package only for specific arches
+  * [config] Set do_extras_package=true for x86en
+  * Rebase to 3.8.4
+  * Release Tracking Bug
+    - LP: #1158863
+  * Input: ALPS - document the alps.h data structures
+    - LP: #1089413
+  * Input: ALPS - copy "model" info into alps_data struct
+    - LP: #1089413
+  * Input: ALPS - move alps_get_model() down below hw_init code
+    - LP: #1089413
+  * Input: ALPS - introduce helper function for repeated commands
+    - LP: #1089413
+  * Input: ALPS - rework detection sequence
+    - LP: #1089413
+  * Input: ALPS - use function pointers for different protocol handlers
+    - LP: #1089413
+  * Input: ALPS - move {addr,nibble}_command settings into
+    alps_set_defaults()
+    - LP: #1089413
+  * Input: ALPS - rework detection of Pinnacle AGx touchpads
+    - LP: #1089413
+  * Input: ALPS - fix command mode check
+    - LP: #1089413
+  * Input: ALPS - move pixel and bitmap info into alps_data struct
+    - LP: #1089413
+  * Input: ALPS - make the V3 packet field decoder "pluggable"
+    - LP: #1089413
+  * Input: ALPS - add support for "Rushmore" touchpads
+    - LP: #1089413
+  * Input: ALPS - enable trackstick on Rushmore touchpads
+    - LP: #1089413
+  * Input: ALPS - remove unused argument to alps_enter_command_mode()
+    - LP: #1089413
+  * Input: ALPS - add "Dolphin V1" touchpad support
+    - LP: #1089413
+  * serial: 8250_dw: Use ifdef with ACPI
+    - LP: #1031162
+  * rebase to v3.8.4
+
+ -- Ben Collins <ben.c@servergy.com>  Sun, 31 Mar 2013 12:45:15 -0400
+
 linux-ppc (3.8.0-6.11) raring; urgency=low
 
   [ Ben Collins ]
