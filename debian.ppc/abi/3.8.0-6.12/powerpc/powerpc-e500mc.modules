@@ -815,7 +815,6 @@ fan53555
 farsync
 fat
 faulty
-fb_sys_fops
 fc0011
 fc0012
 fc0013
@@ -2335,7 +2334,6 @@ rtc-ds1553
 rtc-ds1672
 rtc-ds1742
 rtc-ds2404
-rtc-ds3232
 rtc-ds3234
 rtc-em3027
 rtc-fm3130
@@ -2906,9 +2904,6 @@ synclink
 synclink_cs
 synclink_gt
 synclinkmp
-syscopyarea
-sysfillrect
-sysimgblt
 sysv
 t1pci
 talitos
@@ -3083,7 +3078,6 @@ ucd9200
 udc-core
 udf
 udl
-udlfb
 udp_diag
 ueagle-atm
 ufs
