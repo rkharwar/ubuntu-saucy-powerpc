@@ -1,3 +1,19 @@
+linux-ppc (3.8.0-7.13) raring; urgency=low
+
+  [ Ubuntu: 3.8.0-16.26 ]
+
+  * SAUCE: intel_idle: additional Haswell CPU-id
+    - LP: #1083993
+  * SAUCE: cpufreq: OMAP: instantiate omap-cpufreq as a platform_driver
+  * Rebase to 3.8.5
+  * Release Tracking Bug
+    - LP: #1162956
+  * iwlwifi: add 7000 series device configuration
+    - LP: #1011422
+  * mac80211: prevent spurious HT/VHT downgrade message
+
+ -- Ben Collins <ben.c@servergy.com>  Mon, 01 Apr 2013 20:33:09 -0400
+
 linux-ppc (3.8.0-6.12) raring; urgency=low
 
   [ Ben Collins ]
