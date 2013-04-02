@@ -2799,9 +2799,6 @@ EXPORT_SYMBOL drivers/video/svgalib 0xe28d2a49	svga_set_default_gfx_regs
 EXPORT_SYMBOL drivers/video/svgalib 0xef774f5d	svga_compute_pll
 EXPORT_SYMBOL drivers/video/svgalib 0xf2db5956	svga_match_format
 EXPORT_SYMBOL drivers/video/svgalib 0xf71c9866	svga_tilecursor
-EXPORT_SYMBOL drivers/video/syscopyarea 0xdc898108	sys_copyarea
-EXPORT_SYMBOL drivers/video/sysfillrect 0xb9793b20	sys_fillrect
-EXPORT_SYMBOL drivers/video/sysimgblt 0x4318a264	sys_imageblit
 EXPORT_SYMBOL drivers/video/vgastate 0x686de290	restore_vga
 EXPORT_SYMBOL drivers/video/vgastate 0xe7a2620e	save_vga
 EXPORT_SYMBOL drivers/virt/fsl_hypervisor 0x2b6dc543	fsl_hv_failover_register
@@ -4981,6 +4978,7 @@ EXPORT_SYMBOL vmlinux 0x430154ae	bman_irqsource_remove
 EXPORT_SYMBOL vmlinux 0x4302d0eb	free_pages
 EXPORT_SYMBOL vmlinux 0x43086875	d_alloc_pseudo
 EXPORT_SYMBOL vmlinux 0x430e16d2	machine_id
+EXPORT_SYMBOL vmlinux 0x4318a264	sys_imageblit
 EXPORT_SYMBOL vmlinux 0x43201462	agp_generic_type_to_mask_type
 EXPORT_SYMBOL vmlinux 0x432e5af1	tty_kref_put
 EXPORT_SYMBOL vmlinux 0x43488ca6	sb_min_blocksize
@@ -6862,6 +6860,7 @@ EXPORT_SYMBOL vmlinux 0xb9268d61	da9052_i2c_fix
 EXPORT_SYMBOL vmlinux 0xb93578e2	scsi_unregister
 EXPORT_SYMBOL vmlinux 0xb93ae7b9	scsi_eh_prep_cmnd
 EXPORT_SYMBOL vmlinux 0xb96062b4	dquot_claim_space_nodirty
+EXPORT_SYMBOL vmlinux 0xb9793b20	sys_fillrect
 EXPORT_SYMBOL vmlinux 0xb98a0185	rtc_tm_to_time
 EXPORT_SYMBOL vmlinux 0xb98a2519	sk_free
 EXPORT_SYMBOL vmlinux 0xb9a82a5a	skb_find_text
@@ -7410,6 +7409,7 @@ EXPORT_SYMBOL vmlinux 0xdc70bd5e	pci_enable_device_io
 EXPORT_SYMBOL vmlinux 0xdc720a4b	__splice_from_pipe
 EXPORT_SYMBOL vmlinux 0xdc7bd13e	skb_dequeue
 EXPORT_SYMBOL vmlinux 0xdc7f8ce0	devfreq_monitor_stop
+EXPORT_SYMBOL vmlinux 0xdc898108	sys_copyarea
 EXPORT_SYMBOL vmlinux 0xdc9498dd	down
 EXPORT_SYMBOL vmlinux 0xdcb0349b	sys_close
 EXPORT_SYMBOL vmlinux 0xdcd552c1	set_user_nice
@@ -9836,8 +9836,6 @@ EXPORT_SYMBOL_GPL drivers/video/backlight/ili9320 0xa230f2f6	ili9320_probe_spi
 EXPORT_SYMBOL_GPL drivers/video/backlight/ili9320 0xb26f841f	ili9320_write_regs
 EXPORT_SYMBOL_GPL drivers/video/backlight/ili9320 0xca56f644	ili9320_write
 EXPORT_SYMBOL_GPL drivers/video/backlight/ili9320 0xd7b6a43b	ili9320_shutdown
-EXPORT_SYMBOL_GPL drivers/video/fb_sys_fops 0x6bc6cc85	fb_sys_write
-EXPORT_SYMBOL_GPL drivers/video/fb_sys_fops 0xb058cc0a	fb_sys_read
 EXPORT_SYMBOL_GPL drivers/video/sis/sisfb 0x2e9c67da	sis_free_new
 EXPORT_SYMBOL_GPL drivers/video/sis/sisfb 0x3f532137	sis_malloc_new
 EXPORT_SYMBOL_GPL drivers/virtio/virtio 0x32c32268	register_virtio_device
@@ -12174,6 +12172,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x6b43a007	__lock_page_killable
 EXPORT_SYMBOL_GPL vmlinux 0x6b7bd525	__rio_local_read_config_8
 EXPORT_SYMBOL_GPL vmlinux 0x6ba82994	tpm_do_selftest
 EXPORT_SYMBOL_GPL vmlinux 0x6bc1df09	usb_unanchor_urb
+EXPORT_SYMBOL_GPL vmlinux 0x6bc6cc85	fb_sys_write
 EXPORT_SYMBOL_GPL vmlinux 0x6c49c4f2	clockevents_notify
 EXPORT_SYMBOL_GPL vmlinux 0x6c597158	mmu_notifier_unregister
 EXPORT_SYMBOL_GPL vmlinux 0x6c749afe	__tracepoint_block_unplug
@@ -12882,6 +12881,7 @@ EXPORT_SYMBOL_GPL vmlinux 0xafa30233	usb_hcd_unmap_urb_for_dma
 EXPORT_SYMBOL_GPL vmlinux 0xaff3c8a0	transport_destroy_device
 EXPORT_SYMBOL_GPL vmlinux 0xb00a897a	blk_trace_startstop
 EXPORT_SYMBOL_GPL vmlinux 0xb03f0090	rio_release_outb_dbell
+EXPORT_SYMBOL_GPL vmlinux 0xb058cc0a	fb_sys_read
 EXPORT_SYMBOL_GPL vmlinux 0xb0913148	btree_grim_visitor
 EXPORT_SYMBOL_GPL vmlinux 0xb0aac4af	ata_sg_init
 EXPORT_SYMBOL_GPL vmlinux 0xb0b85f47	ring_buffer_iter_reset
