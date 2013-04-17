@@ -1,3 +1,325 @@
+linux-ppc (3.8.0-9.15) raring; urgency=low
+
+  [ Ubuntu: 3.8.0-19.29 ]
+
+  * UBUNTU: [Config] disable PL330_DMA
+    - LP: #1168039
+  * UBUNTU: SAUCE: (no-up) ARM: highbank: fix cache flush ordering for cpu hotplug
+    - LP: #1169956
+  * SAUCE: (no-up) x86: reboot: Make Dell Optiplex 390 use reboot=pci
+    - LP: #800660
+  * SAUCE: [media] uvcvideo: quirk PROBE_DEF for Dell Studio / OmniVision
+    webcam
+    - LP: #1168430
+  * Revert "drivers/rtc/rtc-at91rm9200.c: use a variable for storing IMR"
+    - LP: #1168506
+  * Revert "PCI/ACPI: Request _OSC control before scanning PCI root bus"
+    - LP: #1168506
+  * Revert "tty/8250_pnp: serial port detection regression since v3.7"
+    - LP: #1168506
+  * ALSA: hda - fixup D3 pin and right channel mute on Haswell HDMI audio
+    - LP: #1167270
+  * ASoC: imx-ssi: Fix occasional AC97 reset failure
+    - LP: #1168506
+  * ASoC: dma-sh7760: Fix compile error
+    - LP: #1168506
+  * ASoC: spear_pcm: Update to new pcm_new() API
+    - LP: #1168506
+  * regmap: Initialize `map->debugfs' before regcache
+    - LP: #1168506
+  * regmap: cache Fix regcache-rbtree sync
+    - LP: #1168506
+  * MIPS: Fix logic errors in bitops.c
+    - LP: #1168506
+  * HID: magicmouse: fix race between input_register() and probe()
+    - LP: #1168506
+  * spi/s3c64xx: modified error interrupt handling and init
+    - LP: #1168506
+  * spi/mpc512x-psc: optionally keep PSC SS asserted across xfer segmensts
+    - LP: #1168506
+  * gpio: stmpe: pass DT node to irqdomain
+    - LP: #1168506
+  * UBIFS: make space fixup work in the remount case
+    - LP: #1168506
+  * reiserfs: Fix warning and inode leak when deleting inode with xattrs
+    - LP: #1168506
+  * ALSA: hda - bug fix on return value when getting HDMI ELD info
+    - LP: #1168506
+  * ALSA: hda - Enabling Realtek ALC 671 codec
+    - LP: #1168506
+  * ALSA: hda - fix typo in proc output
+    - LP: #1168506
+  * drm/nouveau: fix handling empty channel list in ioctl's
+    - LP: #1168506
+  * drm/i915: Be sure to turn hsync/vsync back on at crt enable (v2)
+    - LP: #1168506
+  * drm: correctly restore mappings if drm_open fails
+    - LP: #1168506
+  * mm: prevent mmap_cache race in find_vma()
+    - LP: #1168506
+  * EISA/PCI: Init EISA early, before PNP
+    - LP: #1168506
+  * EISA/PCI: Fix bus res reference
+    - LP: #1168506
+  * ixgbe: fix registration order of driver and DCA nofitication
+    - LP: #1168506
+  * libata: Use integer return value for atapi_command_packet_set
+    - LP: #1168506
+  * libata: Set max sector to 65535 for Slimtype DVD A DS8A8SH drive
+    - LP: #1168506
+  * MIPS: Unbreak function tracer for 64-bit kernel.
+    - LP: #1168506
+  * alpha: Add irongate_io to PCI bus resources
+    - LP: #1168506
+  * PCI/ACPI: Always resume devices on ACPI wakeup notifications
+    - LP: #1168506
+  * PCI/PM: Disable runtime PM of PCIe ports
+    - LP: #1168506
+  * ata_piix: Fix DVD not dectected at some Haswell platforms
+    - LP: #1168506
+  * ftrace: Consistently restore trace function on sysctl enabling
+    - LP: #1168506
+  * powerpc: pSeries_lpar_hpte_remove fails from Adjunct partition being
+    performed before the ANDCOND test
+    - LP: #1168506
+  * mwifiex: limit channel number not to overflow memory
+    - LP: #1168506
+  * mac80211: fix remain-on-channel cancel crash
+    - LP: #1168506
+  * x86: remove the x32 syscall bitmask from syscall_get_nr()
+    - LP: #1168506
+  * hwspinlock: fix __hwspin_lock_request error path
+    - LP: #1168506
+  * remoteproc/ste: fix memory leak on shutdown
+    - LP: #1168506
+  * remoteproc: fix error path of handle_vdev
+    - LP: #1168506
+  * remoteproc: fix FW_CONFIG typo
+    - LP: #1168506
+  * spinlocks and preemption points need to be at least compiler barriers
+    - LP: #1168506
+  * crypto: ux500 - add missing comma
+    - LP: #1168506
+  * crypto: gcm - fix assumption that assoc has one segment
+    - LP: #1168506
+  * drm/mgag200: Index 24 in extended CRTC registers is 24 in hex, not
+    decimal.
+    - LP: #1168506
+  * block: avoid using uninitialized value in from queue_var_store
+    - LP: #1168506
+  * SUNRPC: Remove extra xprt_put()
+    - LP: #1168506
+  * NFSv4: Fix a memory leak in nfs4_discover_server_trunking
+    - LP: #1168506
+  * NFSv4/4.1: Fix bugs in nfs4[01]_walk_client_list
+    - LP: #1168506
+  * drm/i915: Fix build failure
+    - LP: #1168506
+  * x86: Fix rebuild with EFI_STUB enabled
+    - LP: #1168506
+  * thermal: return an error on failure to register thermal class
+    - LP: #1168506
+  * msi-wmi: Fix memory leak
+    - LP: #1168506
+  * cpufreq: exynos: Get booting freq value in exynos_cpufreq_init
+    - LP: #1168506
+  * ARM: EXYNOS: Fix crash on soft reset on EXYNOS5440
+    - LP: #1168506
+  * drm/i915: add quirk to invert brightness on eMachines G725
+    - LP: #1168506
+  * drm/i915: add quirk to invert brightness on eMachines e725
+    - LP: #1168506
+  * drm/i915: add quirk to invert brightness on Packard Bell NCL20
+    - LP: #1168506
+  * r8169: fix auto speed down issue
+    - LP: #1168506
+  * vfio-pci: Fix possible integer overflow
+    - LP: #1168506
+  * NFSv4: Doh! Typo in the fix to nfs41_walk_client_list
+    - LP: #1168506
+  * can: gw: use kmem_cache_free() instead of kfree()
+    - LP: #1168506
+  * mwifiex: complete last internal scan
+    - LP: #1168506
+  * Linux 3.8.7
+    - LP: #1168506
+  * ALSA: usb-audio: fix endianness bug in snd_nativeinstruments_*
+    - LP: #1169930
+  * ASoC: core: Fix to check return value of snd_soc_update_bits_locked()
+    - LP: #1169930
+  * ASoC: wm5102: Correct lookup of arizona struct in SYSCLK event
+    - LP: #1169930
+  * ASoC: wm8903: Fix the bypass to HP/LINEOUT when no DAC or ADC is
+    running
+    - LP: #1169930
+  * tracing: Fix double free when function profile init failed
+    - LP: #1169930
+  * ARM: Kirkwood: Fix typo in the definition of ix2-200 rebuild LED
+    - LP: #1169930
+  * ARM: imx35 Bugfix admux clock
+    - LP: #1169930
+  * dmaengine: omap-dma: Start DMA without delay for cyclic channels
+    - LP: #1169930
+  * PM / reboot: call syscore_shutdown() after disable_nonboot_cpus()
+    - LP: #1169930
+  * ipc: set msg back to -EAGAIN if copy wasn't performed
+    - LP: #1169930
+  * GFS2: Fix unlock of fcntl locks during withdrawn state
+    - LP: #1169930
+  * GFS2: return error if malloc failed in gfs2_rs_alloc()
+    - LP: #1169930
+  * SCSI: libsas: fix handling vacant phy in sas_set_ex_phy()
+    - LP: #1169930
+  * cifs: Allow passwords which begin with a delimitor
+    - LP: #1169930
+  * target: Fix incorrect fallthrough of ALUA Standby/Offline/Transition
+    CDBs
+    - LP: #1169930
+  * vfs: Revert spurious fix to spinning prevention in prune_icache_sb
+    - LP: #1169930
+  * kobject: fix kset_find_obj() race with concurrent last kobject_put()
+    - LP: #1169930
+  * gpio: fix wrong checking condition for gpio range
+    - LP: #1169930
+  * x86-32: Fix possible incomplete TLB invalidate with PAE pagetables
+    - LP: #1169930
+  * tracing: Fix possible NULL pointer dereferences
+    - LP: #1169930
+  * udl: handle EDID failure properly.
+    - LP: #1169930
+  * ftrace: Move ftrace_filter_lseek out of CONFIG_DYNAMIC_FTRACE section
+    - LP: #1169930
+  * sched_clock: Prevent 64bit inatomicity on 32bit systems
+    - LP: #1169930
+  * x86, mm, paravirt: Fix vmalloc_fault oops during lazy MMU updates
+    - LP: #1169930
+  * x86, mm: Patch out arch_flush_lazy_mmu_mode() when running on bare
+    metal
+    - LP: #1169930
+  * tty: don't deadlock while flushing workqueue
+    - LP: #1169930
+  * Linux 3.8.8
+    - LP: #1169930
+  * Release Tracking Bug
+    - LP: #1168504
+
+  [ Ubuntu: 3.8.0-18.28 ]
+
+  * (debian) fix internal linkage for separated header packages
+    - LP: #1165259
+  * SAUCE: Bluetooth: Add support for Broadcom 413c:8143
+    - LP: #1166113
+  * SAUCE: (no-up) apparmor: Fix quieting of audit messages for network
+    mediation
+    - LP: #1163259
+  * SAUCE: (no-up) drm/i915: quirk no PCH_PWM_ENABLE for Dell XPS13
+    backlight
+    - LP: #1162026, #1163720
+  * [Config] Disable CONFIG_PARPORT_PC_FIFO
+    - LP: #339752
+  * SAUCE: (no-up) mac80211_hwsim: Register and bind to driver
+    - LP: #1166250
+  * [Config] RTC_DRV_PL031=y
+  * (debian) Abort build on unresolved symbols
+    - LP: #1166197
+  * [Config] Add libceph to inclusion list
+  * [Config] Drop all inclusion list modules with unsatisfied dependencies
+  * SAUCE: (no-up) Remove emi62 files duplicated in linux-firmware
+  * SAUCE: (no-up) Remove emi26 files duplicated in linux-firmware
+  * SAUCE: (no-up) Remove whiteheat files duplicated in linux-firmware
+  * Release Tracking Bug
+    - LP: #1168040
+  * TTY: do not update atime/mtime on read/write
+    - LP: #1097680
+    - CVE-2013-0160
+  * KVM: x86: Convert MSR_KVM_SYSTEM_TIME to use gfn_to_hva_cache functions
+    (CVE-2013-1797)
+    - LP: #1158258
+    - CVE-2013-1797
+  * KVM: Fix bounds checking in ioapic indirect register reads
+    (CVE-2013-1798)
+    - LP: #1158262
+    - CVE-2013-1798
+  * drm/i915: HDMI/DP - ELD info refresh support for Haswell
+    - LP: #1011438
+  * ALSA - HDA: New PCI ID for Haswell ULT
+    - LP: #1011438
+  * ALSA: hda - Support rereading widgets under the function group
+    - LP: #1011438
+  * ALSA: hda - Add fixup for Haswell to enable all pin and convertor
+    widgets
+    - LP: #1011438
+  * libata: fix DMA to stack in reading devslp_timing parameters
+    - LP: #1031173
+  * dmaengine: dw_dmac: remove CLK dependency
+    - LP: #1031163
+  * dmaengine: dw_dmac: Enhance device tree support
+    - LP: #1031163
+  * dmaengine: dw_dmac: amend description and indentation
+    - LP: #1031163
+  * dw_dmac: change dev_printk() to corresponding macros
+    - LP: #1031163
+  * dw_dmac: don't call platform_get_drvdata twice
+    - LP: #1031163
+  * dw_dmac: change dev_crit to dev_WARN in dwc_handle_error
+    - LP: #1031163
+  * dw_dmac: introduce to_dw_desc() macro
+    - LP: #1031163
+  * dw_dmac: absence of pdata isn't critical when autocfg is set
+    - LP: #1031163
+  * dw_dmac: check for mapping errors
+    - LP: #1031163
+  * dw_dmac: remove redundant check
+    - LP: #1031163
+  * dw_dmac: update tx_node_active in dwc_do_single_block
+    - LP: #1031163
+  * dma: dw_dmac: add dwc_chan_pause and dwc_chan_resume
+    - LP: #1031163
+  * dmaengine: introduce is_slave_direction function
+    - LP: #1031163
+  * dmaengine: add possibility for cyclic transfers
+    - LP: #1031163
+  * dma: dw_dmac: check direction properly in dw_dma_cyclic_prep
+    - LP: #1031163
+  * dma: ep93xx_dma: reuse is_slave_direction helper
+    - LP: #1031163
+  * dma: ipu_idmac: reuse is_slave_direction helper
+    - LP: #1031163
+  * dma: ste_dma40: reuse is_slave_direction helper
+    - LP: #1031163
+  * dw_dmac: call .probe after we have a device in place
+    - LP: #1031163
+  * dw_dmac: store direction in the custom channel structure
+    - LP: #1031163
+  * dw_dmac: make usage of dw_dma_slave optional
+    - LP: #1031163
+  * dw_dmac: backlink to dw_dma in dw_dma_chan is superfluous
+    - LP: #1031163
+  * dw_dmac: allocate dma descriptors from DMA_COHERENT memory
+    - LP: #1031163
+  * dw_dmac: don't exceed AHB master number in dwc_get_data_width
+    - LP: #1031163
+  * dw_dmac: move soft LLP code from tasklet to dwc_scan_descriptors
+    - LP: #1031163
+  * dw_dmac: print out DW_PARAMS and DWC_PARAMS when debug
+    - LP: #1031163
+  * dw_dmac: remove unnecessary tx_list field in dw_dma_chan
+    - LP: #1031163
+  * dw_dmac: introduce total_len field in struct dw_desc
+    - LP: #1031163
+  * dw_dmac: fill individual length of descriptor
+    - LP: #1031163
+  * dw_dmac: return proper residue value
+    - LP: #1031163
+  * dw_dmac: apply default dma_mask if needed
+    - LP: #1031163
+  * dw_dmac: add support for Lynxpoint DMA controllers
+    - LP: #1031163
+  * dw_dmac: adjust slave_id accordingly to request line base
+    - LP: #1031163
+
+ -- Ben Collins <ben.c@servergy.com>  Wed, 17 Apr 2013 16:15:30 -0400
+
 linux-ppc (3.8.0-8.14) raring; urgency=low
 
   [ Ubuntu: 3.8.0-17.27 ]
