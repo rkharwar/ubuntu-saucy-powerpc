@@ -65,11 +65,12 @@ EXPORT_SYMBOL drivers/crypto/caam/caam 0xdf31a9ae	caam_jr_register
 EXPORT_SYMBOL drivers/crypto/caam/caam 0xfd2b02dc	caam_get_era
 EXPORT_SYMBOL drivers/crypto/caam/caam 0xfec869f3	gen_split_key
 EXPORT_SYMBOL drivers/crypto/talitos 0x2f7bcb68	talitos_submit
-EXPORT_SYMBOL drivers/dma/dw_dmac 0x0243154e	dw_dma_cyclic_prep
 EXPORT_SYMBOL drivers/dma/dw_dmac 0x09a0a591	dw_dma_cyclic_start
 EXPORT_SYMBOL drivers/dma/dw_dmac 0x5a68f8a9	dw_dma_cyclic_free
+EXPORT_SYMBOL drivers/dma/dw_dmac 0x73e2dce2	dw_dma_cyclic_prep
 EXPORT_SYMBOL drivers/dma/dw_dmac 0x7d5a7588	dw_dma_get_dst_addr
 EXPORT_SYMBOL drivers/dma/dw_dmac 0xc97a2186	dw_dma_get_src_addr
+EXPORT_SYMBOL drivers/dma/dw_dmac 0xd214bcbe	dw_dma_generic_filter
 EXPORT_SYMBOL drivers/dma/dw_dmac 0xdd82539f	dw_dma_cyclic_stop
 EXPORT_SYMBOL drivers/edac/edac_core 0x767801ce	edac_mc_find
 EXPORT_SYMBOL drivers/edac/mpc85xx_edac 0x22505fdb	mpc85xx_pci_err_probe
@@ -10813,6 +10814,7 @@ EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x65415f7f	snd_hda_override_pin_ca
 EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x67921140	snd_hda_codec_set_pincfg
 EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x67d74b87	snd_hda_check_amp_list_power
 EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x74ac66e6	snd_hda_mixer_bind_switch_get
+EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x76bb6f90	snd_hda_codec_update_widgets
 EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x77b693eb	snd_hda_jack_add_kctls
 EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x78b85907	snd_hda_jack_set_gating_jack
 EXPORT_SYMBOL_GPL sound/pci/hda/snd-hda-codec 0x790bd71a	snd_hda_add_codec_preset
