@@ -5156,6 +5156,7 @@ EXPORT_SYMBOL vmlinux 0x5405f5dd	vlan_dev_vlan_id
 EXPORT_SYMBOL vmlinux 0x5409775b	free_irq_cpu_rmap
 EXPORT_SYMBOL vmlinux 0x5412c7c7	up
 EXPORT_SYMBOL vmlinux 0x5432f886	in6_dev_finish_destroy
+EXPORT_SYMBOL vmlinux 0x5437e321	file_ns_capable
 EXPORT_SYMBOL vmlinux 0x543ef284	seq_hlist_start
 EXPORT_SYMBOL vmlinux 0x547f1c47	vfsmount_lock
 EXPORT_SYMBOL vmlinux 0x549798c3	unregister_netdev
@@ -5204,6 +5205,7 @@ EXPORT_SYMBOL vmlinux 0x56c1788b	mpage_writepage
 EXPORT_SYMBOL vmlinux 0x56c2b95b	rtas_progress
 EXPORT_SYMBOL vmlinux 0x56c8799d	scsi_kunmap_atomic_sg
 EXPORT_SYMBOL vmlinux 0x56db9b0e	scsi_print_command
+EXPORT_SYMBOL vmlinux 0x56e305cb	vm_iomap_memory
 EXPORT_SYMBOL vmlinux 0x5703f2a0	ps2_begin_command
 EXPORT_SYMBOL vmlinux 0x572e85d4	blk_lookup_devt
 EXPORT_SYMBOL vmlinux 0x573f3c0b	ata_dev_printk
@@ -9446,6 +9448,7 @@ EXPORT_SYMBOL_GPL drivers/spi/spi-dw 0xc64984ab	dw_spi_suspend_host
 EXPORT_SYMBOL_GPL drivers/spi/spi-dw 0xd5be488a	dw_spi_add_host
 EXPORT_SYMBOL_GPL drivers/spi/spi-dw 0xe2290c0a	dw_spi_xfer_done
 EXPORT_SYMBOL_GPL drivers/spi/spi-dw 0xfb56b4fd	dw_spi_resume_host
+EXPORT_SYMBOL_GPL drivers/ssb/ssb 0xfbaa2cb8	ssb_pmu_spuravoid_pllupdate
 EXPORT_SYMBOL_GPL drivers/staging/csr/csr_helper 0x043993b8	CsrUint32Ser
 EXPORT_SYMBOL_GPL drivers/staging/csr/csr_helper 0x063ce8fd	CsrMemCpySer
 EXPORT_SYMBOL_GPL drivers/staging/csr/csr_helper 0x1a2f4153	CsrUint16Des
