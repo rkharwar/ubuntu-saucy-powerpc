@@ -1,3 +1,13 @@
+linux-ppc (3.10.0-0.3) saucy; urgency=low
+
+  [ Ben Collins ]
+
+  * [Config] Add libc6-dev-ppc64 so that builds on 64-bit platforms works
+    - This did not appear on my 32-bit test builds. HOST_CC behavior changes
+      based on CPU capability.
+
+ -- Ben Collins <ben.c@servergy.com>  Thu, 11 Jul 2013 23:16:31 -0400
+
 linux-ppc (3.10.0-0.2) saucy; urgency=low
 
   [ Ben Collins ]
