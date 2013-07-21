@@ -1,4 +1,17 @@
-linux-ppc (3.10.0-0.4) raring; urgency=low
+linux-ppc (3.10.0-0.5) saucy; urgency=low
+
+  [ Ubuntu: 3.10.0-4.13 ]
+
+  * SAUCE: (no-up) hyperv: Fix the NETIF_F_SG flag setting in netvsc
+    - LP: #1200243
+  * [Config] CONFIG_DYNAMIC_DEBUG=y
+    - LP: #1202018
+  * mfd: rtsx: Add support for RTL8411B
+    - LP: #1201321
+
+ -- Ben Collins <ben.c@servergy.com>  Sat, 20 Jul 2013 16:24:08 -0400
+
+linux-ppc (3.10.0-0.4) saucy; urgency=low
 
   [ Ubuntu: 3.10.0-3.12 ]
 
