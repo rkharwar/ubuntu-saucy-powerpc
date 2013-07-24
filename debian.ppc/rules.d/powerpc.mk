@@ -3,9 +3,9 @@ build_arch	= powerpc
 header_arch	= $(build_arch)
 defconfig	= pmac32_defconfig
 flavours	= powerpc-smp powerpc64-smp powerpc-e500 powerpc-e500mc
-build_image	= vmlinux
-kernel_file	= $(build_image)
-install_file	= $(build_image)
+build_image	= zImage
+kernel_file	= arch/powerpc/boot/zImage
+install_file	= vmlinux
 
 # These flavours differ
 build_image_powerpc-e500mc	= uImage
