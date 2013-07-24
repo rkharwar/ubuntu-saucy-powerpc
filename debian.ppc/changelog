@@ -1,3 +1,27 @@
+linux-ppc (3.10.0-0.6) saucy; urgency=low
+
+  [ Ben Collins ]
+
+  * [Config] Use zImage for installing vmlinux on ppc32/ppc64
+
+  [ Ubuntu: 3.10.0-5.14 ]
+
+  * Release Tracking Bug
+    - LP: #1203779
+  * Revert "SAUCE: (no-up) add option to hand off all kernel parameters to
+    init"
+    - LP: #1203211
+  * [Packaging] generate a SRCPKGNAME-udebs-FLAVOUR-di depending on all
+    built udebs
+  * [Config] enable SRCPKG-udeb-FLAVOUR-di for master
+  * [Config] enforcer -- relax CONFIG_INIT_PASS_ALL_PARAMS until we fix the
+    associated patch
+    - LP: #1203211
+  * rebase to v3.10.2
+  * add missing i2c-tegra module into armhf udebs
+
+ -- Ben Collins <ben.c@servergy.com>  Tue, 23 Jul 2013 20:34:43 -0400
+
 linux-ppc (3.10.0-0.5) saucy; urgency=low
 
   [ Ubuntu: 3.10.0-4.13 ]
