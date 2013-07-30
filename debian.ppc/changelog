@@ -1,3 +1,47 @@
+linux-ppc (3.10.0-0.7) saucy; urgency=low
+
+  [ Ben Collins ]
+
+  * [Packaging] Add gawk to build-deps
+
+  [ Ubuntu: 3.10.0-6.17 ]
+
+  * Release tracker
+    - LP: #1205408
+  * UBUNTU: [Config] Build-Depend: on gawk to ensure consistant awk in all and arch
+    Explicitly reference gawk in rules files.
+    Fixes FTBS on buildds
+
+  [ Ubuntu: 3.10.0-6.16 ]
+
+  * [Packaging] fix SRCPKGNAME-udebs-FLAVOUR handling for complex flavours
+  * [Config] add an armhf/generic-lpae flavour
+  * [Config] ARM_LPAE=y
+  * [Config] disable TI OMAP2+ support (ARCH_OMAP2PLUS)
+  * [Config] disable Freescale imx support (ARCH_MXC)
+  * [Config] disable Broadcom bcm support (ARCH_BCM)
+  * [Config] disable Allwinner a1x support (ARCH_SUNXI)
+  * [Config] disable Nvidia tegra support (ARCH_TEGRA)
+  * SAUCE: ARM: highbank: Only touch common coherency control register
+    fields
+  * rebase to v3.10.3
+
+  [ Ubuntu: 3.10.0-5.15 ]
+
+  * [Config] add iwldvm to nic-modules
+    - LP: #1204194
+  * [Debian] Supply PKG_ABI in kmake
+    - LP: #1193172
+  * SAUCE: (no-up) hv: Supply vendor ID and package ABI
+    - LP: #1193172
+  * efivars: check for EFI_RUNTIME_SERVICES
+    - LP: #1200570
+  * drm/radeon/hdmi: make sure we have an afmt block assigned
+  * Input: elantech - fix for newer hardware versions (v7)
+    - LP: #1166442
+
+ -- Ben Collins <ben.c@servergy.com>  Mon, 29 Jul 2013 12:34:53 -0400
+
 linux-ppc (3.10.0-0.6) saucy; urgency=low
 
   [ Ben Collins ]
