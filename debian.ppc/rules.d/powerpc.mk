@@ -4,7 +4,11 @@ header_arch	= $(build_arch)
 defconfig	= pmac32_defconfig
 flavours	= powerpc-smp powerpc64-smp powerpc-e500 powerpc-e500mc
 build_image	= zImage
-kernel_file	= arch/powerpc/boot/zImage
+kernel_file	= $(shell if [ ! -f $(builddir)/build-$*/vmlinux.strip ] && \
+		    [ -f $(builddir)/build-$*/vmlinux.strip.gz ]; then \
+			gunzip -c $(builddir)/build-$*/vmlinux.strip.gz \
+			> $(builddir)/build-$*/vmlinux.strip; \
+		    fi && echo vmlinux.strip)
 install_file	= vmlinux
 
 # These flavours differ
