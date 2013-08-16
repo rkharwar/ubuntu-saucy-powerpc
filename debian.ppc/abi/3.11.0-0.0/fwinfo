@@ -530,8 +530,8 @@ firmware:       rtlwifi/rtl8192cufw.bin
 firmware:       rtlwifi/rtl8192defw.bin
 firmware:       rtlwifi/rtl8192sefw.bin
 firmware:       rtlwifi/rtl8712u.bin
-firmware:       rtlwifi/rtl8723aefw.bin
-firmware:       rtlwifi/rtl8723aefw_B.bin
+firmware:       rtlwifi/rtl8723fw.bin
+firmware:       rtlwifi/rtl8723fw_B.bin
 firmware:       sd8385.bin
 firmware:       sd8385_helper.bin
 firmware:       sd8686.bin
