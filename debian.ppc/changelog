@@ -1,3 +1,51 @@
+linux-ppc (3.11.0-1.2) saucy; urgency=low
+
+  [ Ubuntu: 3.11.0-4.9 ]
+
+  * rebase to v3.11-rc7
+  * Release tracker
+    - LP: #1216962
+  * mwifiex: do not create AP and P2P interfaces upon driver loading
+    - LP: #1212720
+
+  [ Ubuntu: 3.11.0-3.8 ]
+
+  * SAUCE: mac80211: ignore (E)CSA in probe response frames
+    - LP: #1201470
+
+  [ Ubuntu: 3.11.0-3.7 ]
+
+  * SAUCE: (no-up) hv_vss_daemon -- prevent self-daemonising to allow
+    upstart to track
+  * SAUCE: (no-up) hv -- bodge hv_vss_daemon so it can use the local
+    linux/hyperv.h
+  * SAUCE: hv: Add vss daemon to Makefile
+  * [Debian] Add hv_vss_daemon to tools package
+    - LP: #1213282
+  * [Config] Fix ubuntu directoy Kbuilds
+    - LP: #1181755
+
+  [ Ubuntu: 3.11.0-3.6 ]
+
+  * [Packaging] tools: conditionalise x86 and hyper-v tools sensibly
+  * [Config] tools: enable x86 and hyper-v
+  * Revert "SAUCE: (no-up) apparmor: Sync to apparmor 3 dev stable
+    snapshot"
+  * Revert "SAUCE: (no-up) apparmor: fix apparmor module status for none
+    root users"
+  * SAUCE: (no-up) apparmor: Sync to apparmor 3 - alpha 4 snapshot
+  * SAUCE: (no-up) intel_ips: blacklist ASUSTek G60JX laptops
+    - LP: #1210848
+  * [debian] tools: ship 'cpupower' in linux-tools
+    - LP: #1158668
+  * [Config] Build-dep on libpci-dev for cpu tools
+    - LP: #1158668
+  * rebase to v3.11-rc6
+  * Release tracker
+    - LP: #1213941
+
+ -- Ben Collins <ben.c@servergy.com>  Thu, 29 Aug 2013 15:51:36 -0400
+
 linux-ppc (3.11.0-0.1) saucy; urgency=low
 
   [ Ben Collins ]
