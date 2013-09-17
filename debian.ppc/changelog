@@ -1,4 +1,10 @@
-linux-ppc (3.11.0-2.3) saucy; urgency=low
+linux-ppc (3.11.0-2.4) saucy; urgency=low
+
+  [ Ben Collins ]
+
+  * Fixed flavour listing to include powerpc64-emb
+
+  [ PPC-Ubuntu-3.11.0-2.3 ]
 
   [ Ben Collins ]
 
