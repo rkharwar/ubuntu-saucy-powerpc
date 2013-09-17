@@ -9,4 +9,4 @@ repo_list=(
 package_prefixes linux-image
 
 # Ports arches and flavours.
-getall powerpc powerpc-smp powerpc64-smp powerpc-e500 powerpc-e500mc
+getall powerpc powerpc-smp powerpc64-smp powerpc-e500 powerpc-e500mc powerpc64-emb

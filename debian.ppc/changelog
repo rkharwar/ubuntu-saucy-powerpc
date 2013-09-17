@@ -1,3 +1,199 @@
+linux-ppc (3.11.0-2.3) saucy; urgency=low
+
+  [ Ben Collins ]
+
+  * [Config] Add powerpc64-emb kernel image
+  * SAUCE: Fixup freescale usb phy driver to work on ppc64
+
+  [ Upstream Kernel Changes ]
+
+  * powerpc/book3e: rename interrupt_end_book3e with __end_interrupts
+  * powerpc/book3e: support CONFIG_RELOCATABLE
+  * book3e/kexec/kdump: enable kexec for kernel
+  * book3e/kexec/kdump: create a 1:1 TLB mapping
+  * book3e/kexec/kdump: introduce a kexec kernel flag
+  * book3e/kexec/kdump: implement ppc64 kexec specfic
+  * book3e/kexec/kdump: redefine VIRT_PHYS_OFFSET
+  * book3e/kexec/kdump: recover "r4 = 0" to create the initial TLB
+
+  [ Ubuntu: 3.11.0-7.14 ]
+
+  * [Packaging] sort out linux-tools naming
+    - LP: #1205284
+  * [Packaging] linux-tools: switch to common generic version helper
+  * [Config] highbank: ecx1000: CPU_IDLE causes instabilities, disable it
+  * Release tracker
+    - LP: #1226160
+  * SAUCE: ARM: dts: Fix muxing and regulator for wl12xx on the SDIO bus
+    for pandaboard
+  * USB: handle LPM errors during device suspend correctly
+    - LP: #1011415
+  * usb: don't check pm qos NO_POWER_OFF flag in usb_port_suspend()
+    - LP: #1011415
+  * usb: Don't fail port power resume on device disconnect.
+    - LP: #1011415
+  * rebase to v3.11.1
+
+  [ Ubuntu: 3.11.0-7.13 ]
+
+  * Release tracker
+    - LP: #1223545
+  * SAUCE: (no-up) scsi: add scsi device flag to request VPD pages be used at SPC-2
+    - LP: #1223499
+  * SAUCE: (no-up) scsi: add scsi device flag to request READ CAPACITY (16) be preferred
+    - LP: #1223499
+  * SAUCE: (no-up) scsi: hyper-v storage -- mark as VPD capable at SPC-2
+    - LP: #1223499
+  * SAUCE: (no-up) scsi: hyper-v storage -- mark as preferring READ CAPACITY (16) at SPC-2
+    - LP: #1223499
+  * SAUCE: (no-up) Only let characters through when there are active readers.
+    - LP: #1208740
+  * [Debian] getabis: Commit new ABI directory, remove the old
+  * [Config] CONFIG_EFIVAR_FS=y
+    - LP: #1223195
+  * [Config] CONFIG_EFI_VARS_PSTORE=m,
+    CONFIG_EFI_VARS_PSTORE_DEFAULT_DISABLE=n
+  * SAUCE: (no-up) USB: input: cm109.c: Convert high volume dev_err() to dev_err_ratelimited()
+    - LP: #1222850
+  * Intel xhci: refactor EHCI/xHCI port switching
+    - LP: #1210858
+
+  [ Ubuntu: 3.11.0-6.12 ]
+
+  * Release tracker
+    - LP: #1222893
+  * Revert "ubuntu: (no-squash) AUFS3 -- aufs3-standalone.patch"
+  * Revert "ubuntu: (no-squash) AUFS3 -- aufs3-base.patch"
+  * ubuntu: (no-squash) AUFS3 -- aufs3-base.patch
+  * ubuntu: (no-squash) AUFS3 -- aufs3-standalone.patch
+    - LP: #1222407
+  * [Config] restore mmc boot on panda
+  * SAUCE: apparmor: Use shash crypto API interface for profile hashes
+    - LP: #1216294
+  * net: calxedaxgmac: remove NETIF_F_FRAGLIST setting
+  * net: calxedaxgmac: read correct field in xgmac_desc_get_buf_len
+  * net: calxedaxgmac: fix race between xgmac_tx_complete and xgmac_tx_err
+  * net: calxedaxgmac: fix possible skb free before tx complete
+  * net: calxedaxgmac: update ring buffer tx_head after barriers
+  * net: calxedaxgmac: fix race with tx queue stop/wake
+  * net: calxedaxgmac: enable interrupts after napi_enable
+  * net: calxedaxgmac: fix various errors in xgmac_set_rx_mode
+  * net: calxedaxgmac: remove some unused statistic counters
+  * net: calxedaxgmac: fix rx DMA mapping API size mismatches
+  * net: calxedaxgmac: fix xgmac_xmit DMA mapping error handling
+  * mfd: rtsx: Read vendor setting from config space
+    - LP: #1201698
+
+  [ Ubuntu: 3.11.0-5.11 ]
+
+  * Release tracker
+    - LP: #1221886
+  * SAUCE: Bluetooth: Add support for 04ca:2007
+    - LP: #1153448
+  * SAUCE: Bluetooth: Add support for 105b:e065
+    - LP: #1161261
+  * SAUCE: Bluetooth: Add support for Broadcom 413c:8143
+    - LP: #1166113
+  * igb: Reset the link when EEE setting changed
+    - LP: #1219619
+  * igb: Read register for latch_on without return value
+    - LP: #1219619
+  * igb: Added rcu_lock to avoid race
+    - LP: #1219619
+  * igb: don't allow SR-IOV without MSI-X
+    - LP: #1219619
+  * igb: Update MTU so that it is always at least a standard frame size
+    - LP: #1219619
+  * igb: Refactor of init_nvm_params
+    - LP: #1219619
+  * igb: Refactor NVM read functions to accommodate devices with no flash
+    - LP: #1219619
+  * igb: Add device support for flashless SKU of i210 device
+    - LP: #1219619
+  * igb: Fix get_fw_version function for all parts
+    - LP: #1219619
+  * igb: Add macro for size of RETA indirection table
+    - LP: #1219619
+  * igb: Expose RSS indirection table for ethtool
+    - LP: #1219619
+  * igb: Don't look for a PBA in the iNVM when flashless
+    - LP: #1219619
+  * igb: Implementation of 1-sec delay for i210 devices
+    - LP: #1219619
+  * igb: New PHY_ID for i354 device
+    - LP: #1219619
+  * igb: M88E1543 PHY downshift implementation
+    - LP: #1219619
+  * igb: No PHPM support in i354 devices
+    - LP: #1219619
+  * igb: Support to get 2_5G link status for appropriate media type
+    - LP: #1219619
+  * igb: Get speed and duplex for 1G non_copper devices
+    - LP: #1219619
+  * igb: Implementation to report advertised/supported link on i354 devices
+    - LP: #1219619
+  * igb: Update version number
+    - LP: #1219619
+  * Bluetooth: Take proper tty_struct references
+    - LP: #1189998
+  * Bluetooth: Remove the device from the list in the destructor
+    - LP: #1189998
+  * Bluetooth: Move the tty initialization and cleanup out of open/close
+    - LP: #1189998
+  * Bluetooth: Implement .activate, .shutdown and .carrier_raised methods
+    - LP: #1189998
+  * Bluetooth: Fix the reference counting of tty_port
+    - LP: #1189998
+  * Bluetooth: Purge the dlc->tx_queue to avoid circular dependency
+    - LP: #1189998
+  * SAUCE: Bluetooth: Support for loading broadcom patchram firmware
+    - LP: #1065400
+  * SAUCE: Bluetooth: Add support for 13d3:3388 and 13d3:3389
+    - LP: #1065400
+
+  [ Ubuntu: 3.11.0-5.10 ]
+
+  * Release tracker
+    - LP: #1220222
+  * Revert "[Config] Fix ubuntu directoy Kbuilds"
+  * Revert "aufs update dropped some Kbuild files"
+  * Revert "ubuntu: AUFS -- follow rename of loop.h into drivers/block"
+  * Revert "ubuntu: AUFS -- update to
+    8e503d4142c189ed6c47a2177ad2cd058e8d340e"
+  * Revert "ubuntu: (no-squash) AUFS3 -- aufs3-standalone.patch"
+  * Revert "ubuntu: (no-squash) AUFS3 -- aufs3-base.patch"
+  * rebase to v3.11 final
+  * [Config] clean up ubuntu/Kconfig and ubuntu/Makefile
+  * ubuntu: AUFS (no-squash): basic framework and update machinary
+  * ubuntu: (no-squash) AUFS3 -- aufs3-base.patch
+  * ubuntu: (no-squash) AUFS3 -- aufs3-standalone.patch
+  * ubuntu: AUFS -- update to 5ac5fe26a90a818218310e208d17688fddb07622
+  * ubuntu: (no-squash) AUFS -- enable aufs
+  * ubuntu: AUFS -- fix remaining d_count references to use accessor
+  * ubuntu: lttng -- follow rename of pid_ns
+  * SAUCE: disable stack-protector for ARM compressed bootloader
+  * [Config] ARM_ATAG_DTB_COMPAT=y
+  * [Config] Enable KVM and virtio for armhf generic-lpae
+  * [Config] CONFIG_ARPD=y
+  * [Config] CONFIG_ZSWAP=y
+    - LP: #1215379
+  * uvcvideo: quirk PROBE_DEF for Dell SP2008WFP monitor.
+    - LP: #1217957
+  * ARM: use phys_addr_t for DMA zone sizes
+  * ARM: highbank: enable DMA zone for LPAE
+  * ARM: highbank: select ARCH_HAS_HOLES_MEMORYMODEL
+  * ARM: highbank: select required errata work-arounds
+  * DMA: fix AMBA PL08x compilation issue with 64bit DMA address type
+  * DMA: fix printk warning in AMBA PL08x DMA driver
+  * ARM: highbank: select ARCH_DMA_ADDR_T_64BIT for LPAE
+  * ARM: move outer_cache declaration out of ifdef
+  * ARM: highbank: avoid L2 cache smc calls when PL310 is not present
+  * ARM: highbank: clean-up some unused includes
+  * ARM: xen: only set pm function ptrs for Xen guests
+  * rebase to v3.11
+
+ -- Ben Collins <ben.c@servergy.com>  Tue, 17 Sep 2013 04:14:30 +0000
+
 linux-ppc (3.11.0-1.2) saucy; urgency=low
 
   [ Ubuntu: 3.11.0-4.9 ]
