@@ -1698,7 +1698,6 @@ lttng-probe-jbd
 lttng-probe-jbd2
 lttng-probe-kmem
 lttng-probe-kvm
-lttng-probe-lttng
 lttng-probe-module
 lttng-probe-napi
 lttng-probe-net
